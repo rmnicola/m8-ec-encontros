@@ -4,18 +4,22 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const organizationName = 'rmnicola'; // Usually your GitHub org/user name.
+const projectName = 'm8-ec-encontros'; // Usually your repo name.
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'rmnicola', // Usually your GitHub org/user name.
-  projectName: 'm8-ec-encontros', // Usually your repo name.
 
   title: 'Módulo 8 - EC',
   tagline: 'Robótica móvel e deep learning',
   favicon: 'img/inteli.svg',
   url: `https://${organizationName}.github.io`,
   baseUrl: `/${projectName}/`,
+
+  organizationName: 'rmnicola', // Usually your GitHub org/user name.
+  projectName: 'm8-ec-encontros', // Usually your repo name.
 
 
 
@@ -41,7 +45,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/${organizationName}/${projectName}/tree/main/docs',
         },
         blog: false,
         theme: {
