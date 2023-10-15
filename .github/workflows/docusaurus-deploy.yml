@@ -9,6 +9,10 @@ on:
       - main
 
 jobs:
+  environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
   build:
     runs-on: ubuntu-latest
 
@@ -19,18 +23,22 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 14 # You can update this to another version if needed.
+        node-version: latest
 
     - name: Install and Build
       run: |
         cd docs
         npm install
-        npm run build
+        npm run deploy
+
+    - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+    - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ~/docs/build
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages # This is the default branch for github pages, you can change if needed.
-        folder: docs/build
-        token: ${{ secrets.DOCUSAURUS_TOKEN }}
-
+        id: deployment
+        uses: actions/deploy-pages@v2

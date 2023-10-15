@@ -6,20 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'rmnicola', // Usually your GitHub org/user name.
+  projectName: 'm8-ec-encontros', // Usually your repo name.
+
   title: 'Módulo 8 - EC',
   tagline: 'Robótica móvel e deep learning',
   favicon: 'img/inteli.svg',
+  url: `https://${organizationName}.github.io`,
+  baseUrl: `/${projectName}/`,
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Inteli', // Usually your GitHub org/user name.
-  projectName: 'M8-EC', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
