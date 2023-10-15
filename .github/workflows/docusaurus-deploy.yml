@@ -9,11 +9,10 @@ on:
       - main
 
 jobs:
-  environment:
+  build:
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-  build:
     runs-on: ubuntu-latest
 
     steps:
