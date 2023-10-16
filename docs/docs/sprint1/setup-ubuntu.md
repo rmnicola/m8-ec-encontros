@@ -12,7 +12,19 @@ Para isso, vamos utilizar o [Balena Etcher](https://etcher.balena.io/) e baixar
 a imagem oficial do [Ubuntu 22.04](https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-desktop-amd64.iso).
 A captura de tela abaixo resume o processo:
 
-<iframe width="90%" height="500" src="https://www.youtube.com/embed/XePk0-KYkrg" allowfullscreen></iframe>
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://www.youtube.com/embed/XePk0-KYkrg"
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
 
 ## Instalando o Ubuntu
 
@@ -25,7 +37,19 @@ gravar o Ubuntu.
 Se tudo deu certo, você vai ser levado direto para a tela de instalação do 
 Ubuntu. A partir daí, siga as instruções abaixo:
 
-<iframe width="90%" height="500" src="https://www.youtube.com/embed/qMEGwP0PqTk" allowfullscreen></iframe>
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://www.youtube.com/embed/qMEGwP0PqTk" 
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
 
 ### Particionando o cartão SD 
 
