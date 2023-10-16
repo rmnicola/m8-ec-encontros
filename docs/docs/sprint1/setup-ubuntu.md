@@ -1,6 +1,6 @@
 ---
 title: Instalação do Ubuntu
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Instalação do Ubuntu em cartão SD
@@ -48,6 +48,17 @@ resume-se em:
         allowFullScreen>
     </iframe>
 </div>
+
+## Bootando no pen drive 
+
+A seguir, vai ser necessário reiniciar o seu computador. Logo após o splash screen 
+da fabricante da sua placa mãe/laptop, você deve apertar uma tecla especial para 
+entrar no menu de boot. Essa tecla tipicamente é o `F12`. Esse menu é diferente para 
+cada fabricante, mas a ideia é que você possa manualmente selecionar, a partir de uma lista, 
+qual dispositivo de armazenamento será utilizando pelo bootloader da placa mãe do seu 
+computador. No nosso caso, precisaremos selecionar o pen drive que acabamos de configurar.
+Como saber qual item é o pen drive? Geralmente é possível ver o nome da fabricante no 
+nome do dispositivo, mas talvez acabe virando um processo de tentativa e erro.
 
 ## Instalando o Ubuntu
 
