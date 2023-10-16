@@ -5,12 +5,35 @@ sidebar_position: 1
 
 # Instalação do Ubuntu em cartão SD
 
-## Criando um disco de boot
+## Criando um pen drive de boot
 
-O primeiro passo para instalar o Ubuntu é a criação de um disco de boot.
-Para isso, vamos utilizar o [Balena Etcher](https://etcher.balena.io/) e baixar
-a imagem oficial do [Ubuntu 22.04](https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-desktop-amd64.iso).
-A captura de tela abaixo resume o processo:
+Para poder seguir esse tutorial, você vai precisar de:
+```markdown
+* Um pen drive com pelo menos 2GB de espaço total (ele vai ser formatado!);
+* Um cartão SD com pelo menos 16GB de espaço (sugerido 32GB ou mais); e
+* O seu computador (precisa ter porta USB e SD, claro =D).
+```
+
+Para instalar o Ubuntu, de longe a maneira mais fácil é usando um pen drive. 
+Esse pen drive vai guardar uma versão portátil do Ubuntu. Nessa versão portátil 
+temos acesso a várias das ferramentas do SO completo, incluindo uma ferramenta de 
+instalação.
+
+Para criar esse pen drive, que vamos chamar de `live boot`, precisamos utilizar 
+uma ferramenta capaz de gravar uma imagem do formato `iso` diretamente no pen 
+drive. A ferramenta que costumo utilizar para isso no Windows é o `Balena Etcher`.
+
+Vamos primeiro baixar a imagem do live boot. Para isso, clique [nesse link](https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-desktop-amd64.iso).
+
+A seguir, vamos instalar o Balena Etcher. Para isso, vamos usar o instalador
+que você pode encontrar [nesse link](https://github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Setup-1.18.11.exe).
+
+Siga o setup de instalação do Balena Etcher e execute a aplicação. O vídeo a seguir 
+exibe o processo completo para gravar a imagem do Ubuntu em um pen drive. Esse processo 
+resume-se em:
+1. Encontrar o arquivo `iso` no diretório onde você baixou;
+2. Escolher o pen drive na lista de drives do sistema; e 
+3. Clicar em `flash`.
 
 <div style={{ textAlign: 'center' }}>
     <iframe 
@@ -27,6 +50,13 @@ A captura de tela abaixo resume o processo:
 </div>
 
 ## Instalando o Ubuntu
+
+:::danger
+ATENÇÃO!! Quando estiver instalando o Ubuntu, as duas primeiras opções de 
+instalador serão para criar um dual boot com Windows e apagar a partição Windows 
+completamente. Não vamos usar **nenhuma dessas opções**. Vamos escolher a terceira 
+opção, que é a instalação customizada.
+:::
 
 A seguir, vai ser necessário reiniciar o computador com o disco de boot plugado
 em sua porta USB. Durante o processo de inicialização, você precisará apertar a 
