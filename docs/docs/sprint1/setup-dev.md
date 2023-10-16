@@ -120,10 +120,8 @@ Em construção. Ainda não configurei meu vscode.
 
 ## Git
 :::note
-
 Ainda não arrumei um probleminha na assinatura de commit do git. Tudo vai 
 funcionar, mas vai aparecer `Unverified` no github. Em breve arrumo
-
 :::
 
 O git é uma das ferramentas mais importantes no arsenal do desenvolvedor. 
@@ -153,7 +151,7 @@ Se tudo deu certo, você configurou sua chave ssh e ela automaticamente foi
 copiada pro seu clipboard. Entre [nesse link](https://github.com/settings/keys),
  clique em `Adicionar uma chave SSH` e é só apertar `Ctrl-V`.
 
-### Node
+## Node
 
 Snap de novo, Canonical? Não, vamos instalar usando o `fnm`, um gerenciador de 
 versões do Node feito inteiramente em Rust (apoiando os infinitos projetos que 
