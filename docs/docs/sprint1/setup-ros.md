@@ -1,6 +1,6 @@
 ---
 title: Instalação do ROS
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Instalação do ROS 2 Humble
@@ -30,6 +30,13 @@ Bastando, em vez disso, fazer:
 
 ```bash
 install-ros 
+```
+
+Como fazer isso? Basta executar como admin o script de instalação:
+
+```bash
+cd Scripts 
+sudo ./install.sh
 ```
 
 Após a instalação, não se esqueça de adicionar 
