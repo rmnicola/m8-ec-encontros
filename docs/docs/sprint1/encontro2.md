@@ -1,12 +1,12 @@
 ---
 title: Encontro 2
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Material do encontro 2
 
-## Roteiro 
+## 1. Roteiro 
 
-## Slides 
+## 2. Slides 
 
-## Exemplos
+## 3. Exemplos

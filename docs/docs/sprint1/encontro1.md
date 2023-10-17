@@ -5,12 +5,12 @@ sidebar_position: 1
 
 # Material do encontro 1
 
-## Roteiro 
+## 1. Roteiro 
 1. Apresentação de conceitos básicos de arquitetura de software;
 2. Como não quebrar o repositório ao fazer pull requests; e 
 3. Atividade prática: configuração de um repositório para usar o docusaurus.
 
-## Slides 
+## 2. Slides 
 
 <div style={{ textAlign: 'center' }}>
     <iframe 
@@ -26,7 +26,6 @@ sidebar_position: 1
     </iframe>
 </div>
 
-## Exemplos
-:::info
-Em construção. Volte mais tarde =D 
-:::
+## 3. Exemplos
+
+* [Repositório de exemplo do docusaurus](https://github.com/rmnicola/m8-ec-encontros.git)

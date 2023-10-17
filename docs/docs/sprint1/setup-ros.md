@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Instalação do ROS 2 Humble
 
-## Método 1 - script de instalação automática
+## 1. Script de instalação automática
 
 Para facilitar o processo de instalação do ROS 2 Humble, é possível utilizar 
 um script feito por um bom samaritano. Para tal, clone o repositório onde esta
@@ -43,7 +43,7 @@ Após a instalação, não se esqueça de adicionar
 `source /opt/ros/humble/setup.xxx` ao arquivo de configuração do seu shell,
 substituindo o `xxx` pela extensão adequada. (mais comuns bash e zsh)
 
-## Método 2 - na raça
+## 2. Na raça
 
 <div style={{ textAlign: 'center' }}>
     <iframe 

@@ -1,6 +1,6 @@
 ---
 title: Design Patterns
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Design patterns básicos em Python
@@ -9,12 +9,12 @@ sidebar_position: 8
 Em construção. Volte mais tarde =D 
 :::
 
-## Strategy pattern 
+## 1. Strategy pattern 
 :::info
 Em construção. Volte mais tarde =D 
 :::
 
-## Observer pattern 
+## 2. Observer pattern 
 :::info
 Em construção. Volte mais tarde =D 
 :::
