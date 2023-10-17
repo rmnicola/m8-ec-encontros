@@ -1,0 +1,93 @@
+---
+title: Engenharia de software
+sidebar_position: 5
+---
+
+# Acoplamento e Coesão em Engenharia de Software
+
+**Autoestudo de coesão e acoplamento**
+
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://www.youtube.com/embed/eiDyK_ofPPM" 
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
+
+O desenvolvimento de software eficaz e sustentável depende muito de como as partes individuais do software interagem entre si. Dois conceitos centrais nesse contexto são acoplamento e coesão.
+
+## 1. Coesão
+
+Coesão refere-se à medida em que as responsabilidades de um módulo ou classe são estreitamente relacionadas. Uma classe coesa faz "uma coisa e faz bem". Quando a coesão é alta, o módulo ou a classe tem um propósito bem definido, o que torna o software mais compreensível, fácil de manter e menos propenso a erros.
+
+**Exemplo de Coesão**:
+
+Vamos supor que temos uma classe responsável por realizar operações aritméticas básicas:
+
+```python
+class Calculadora:
+
+    def somar(self, a, b):
+        return a + b
+
+    def subtrair(self, a, b):
+        return a - b
+
+    def multiplicar(self, a, b):
+        return a * b
+
+    def dividir(self, a, b):
+        if b == 0:
+            raise ValueError("Não é possível dividir por zero.")
+        return a / b
+```
+
+A classe acima é coesa porque todas as suas funções estão relacionadas ao propósito central de realizar cálculos aritméticos.
+
+## 2. Acoplamento
+
+Acoplamento refere-se ao grau em que um módulo ou classe depende de outros módulos ou classes. O objetivo é ter o menor acoplamento possível, ou seja, cada módulo ou classe deve operar de forma tão independente quanto possível. Um baixo acoplamento facilita a manutenção, o teste e a reutilização do código.
+
+**Exemplo de Acoplamento**:
+
+Imagine que temos duas classes, uma para armazenar detalhes do usuário e outra para gerenciar autenticação:
+
+```python
+class DetalhesUsuario:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+class Autenticacao:
+    def login(self, usuario):
+        if usuario.nome == "admin":
+            return True
+        return False
+```
+
+Se, no futuro, a estrutura ou os métodos da classe `DetalhesUsuario` forem alterados, pode haver um impacto direto na classe `Autenticacao`, pois ela está acoplada à classe `DetalhesUsuario` através do uso direto do atributo `nome`.
+
+**Reduzindo Acoplamento**:
+
+Uma maneira de reduzir o acoplamento é através da injeção de dependência. Em vez de a classe `Autenticacao` depender diretamente de `DetalhesUsuario`, podemos passar a dependência como um parâmetro:
+
+```python
+class Autenticacao:
+    def login(self, nome_usuario):
+        if nome_usuario == "admin":
+            return True
+        return False
+```
+
+Agora, a classe `Autenticacao` não depende diretamente da estrutura de `DetalhesUsuario`.
+
+## Conclusão
+
+Manter uma alta coesão e um baixo acoplamento no design do software são práticas recomendadas, pois facilitam a manutenção, compreensão, testabilidade e reusabilidade do código. Ambos os conceitos são fundamentais na engenharia de software e são pilares para a construção de sistemas modulares e escaláveis.

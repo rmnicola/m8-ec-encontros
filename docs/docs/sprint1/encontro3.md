@@ -1,12 +1,12 @@
 ---
 title: Encontro 3
-sidebar_position: 11
+sidebar_position: 12
 ---
 
 # Material do encontro 3
 
-## Roteiro 
+## 1. Roteiro 
 
-## Slides 
+## 2. Slides 
 
-## Exemplos
+## 3. Exemplos

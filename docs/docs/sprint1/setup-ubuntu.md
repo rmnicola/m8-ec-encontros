@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Instalação do Ubuntu em cartão SD
 
-## Criando um pen drive de boot
+## 1. Criando um pen drive de boot
 
 Para poder seguir esse tutorial, você vai precisar de:
 ```markdown
@@ -43,13 +43,13 @@ resume-se em:
             width: '100%',
             height: '50vh',
         }}
-        src="https://www.youtube.com/embed/XePk0-KYkrg"
+        src="https://www.youtube.com/embed/hjgOSuDbVoU"
         frameborder="0" 
         allowFullScreen>
     </iframe>
 </div>
 
-## Bootando no pen drive 
+## 2. Bootando no pen drive 
 
 A seguir, vai ser necessário reiniciar o seu computador. Logo após o splash screen 
 da fabricante da sua placa mãe/laptop, você deve apertar uma tecla especial para 
@@ -60,7 +60,7 @@ computador. No nosso caso, precisaremos selecionar o pen drive que acabamos de c
 Como saber qual item é o pen drive? Geralmente é possível ver o nome da fabricante no 
 nome do dispositivo, mas talvez acabe virando um processo de tentativa e erro.
 
-## Instalando o Ubuntu
+## 3. Instalando o Ubuntu
 
 :::danger
 ATENÇÃO!! Quando estiver instalando o Ubuntu, as duas primeiras opções de 
@@ -86,13 +86,13 @@ Ubuntu. A partir daí, siga as instruções abaixo:
             width: '100%',
             height: '50vh',
         }}
-        src="https://www.youtube.com/embed/qMEGwP0PqTk" 
+        src="https://www.youtube.com/embed/SVK0ONyTnS8" 
         frameborder="0" 
         allowFullScreen>
     </iframe>
 </div>
 
-### Particionando o cartão SD 
+### 3.1. Particionando o cartão SD 
 
 Ao criar as partições do cartão SD, sugiro a seguinte configuração mínima:
 

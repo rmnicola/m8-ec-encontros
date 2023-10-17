@@ -8,7 +8,7 @@ sidebar_position: 4
 Nesta seção estão algumas das ferramentas de desenvolvimento para tornar a 
 vida de vocês um pouco mais fácil (e a vida no terminal ficar mais confortável)
 
-## Zsh
+## 1. Zsh
 
 A primeira dessas ferramentas na verdade é uma versão mais moderna do antigo 
 bourne shell (shell) e o bourne again shell (bash). O principal motivo da 
@@ -30,7 +30,7 @@ ser a minha configuração, mas utilizando o meu repositório de `Dotfiles` em
 conjunto com o de `Scripts` fica muito fácil configurar o zsh. Para começar,
 vamos instalar o zsh com:
 
-### Instalando o zsh
+### 1.1. Instalando o zsh
 
 ```bash
 sudo apt install zsh
@@ -45,7 +45,7 @@ chsh -s $(which zsh)
 Notem que, para que essa mudança seja computada, é necessário deslogar e logar
 novamente.
 
-### Reproduzindo a minha configuração
+### 1.2. Reproduzindo a minha configuração
 
 Para reproduzir a minha configuração, vamos começar clonando o meu repositório
 de scripts:
@@ -89,7 +89,7 @@ echo "ZDOTDIR=$HOME/.config/zsh" >> /etc/zsh/zshenv
 ```
 
 
-## Nvim
+## 2. Nvim
 
 > I use neovim, btw
 >
@@ -114,11 +114,11 @@ Se você usou meus `Dotfiles` no passo anterior, assim que você abrir o neovim
 o Packer vai trabalhar e baixar todas as extensões necessárias. Após isso, 
 reinicie o neovim e desenvolva o seu código confortavelmente =)
 
-## Vscode
+## 3. Vscode
 
 Em construção. Ainda não configurei meu vscode.
 
-## Git
+## 4. Git
 :::note
 Ainda não arrumei um probleminha na assinatura de commit do git. Tudo vai 
 funcionar, mas vai aparecer `Unverified` no github. Em breve arrumo
@@ -151,7 +151,7 @@ Se tudo deu certo, você configurou sua chave ssh e ela automaticamente foi
 copiada pro seu clipboard. Entre [nesse link](https://github.com/settings/keys),
  clique em `Adicionar uma chave SSH` e é só apertar `Ctrl-V`.
 
-## Node
+## 5. Node
 
 Snap de novo, Canonical? Não, vamos instalar usando o `fnm`, um gerenciador de 
 versões do Node feito inteiramente em Rust (apoiando os infinitos projetos que 
