@@ -14,19 +14,19 @@ métodos de teste para validar esses requisitos em um contexto prático.
 Desenvolva um requisito não funcional (RNF) para um robô de serviço utilizado 
 no contexto do projeto deste módulo. O problema proposto se divide em:
 
-### 2.1. Definição do Requisito Não Funcional
+1. **Definição do Requisito Não Funcional**
 
    - Escolha um aspecto específico do robô (por exemplo, autonomia da bateria,
 velocidade de movimento, capacidade de interação com os hóspedes, etc.).
    - Defina um requisito não funcional claro e mensurável para esse aspecto. 
 
-### 2.2. Método de Teste
+2. **Método de Teste**
 
    - Descreva uma forma de testar o requisito não funcional que você definiu. O
 método de teste deve ser prático e fornecer resultados quantitativos ou
 qualitativos claros.
 
-## 2. Padrão de Qualidade para a Entrega
+## 3. Padrão de Qualidade para a Entrega
 
 1. **Clareza e Precisão:** O requisito não funcional definido deve ser claro,
 específico e livre de ambiguidades. Deve ser facilmente compreendido por
@@ -48,13 +48,14 @@ e linguagem clara. Erros gramaticais e ortográficos devem ser minimizados. O
 resultado final deve ser integrado à documentação do grupo.
 
 6. **Originalidade:** A resposta deve ser original e refletir o pensamento
-independente do aluno. Respostas copiadas ou pouco originais serão penalizadas.
+independente do aluno. Respostas pouco originais serão penalizadas. Respostas 
+copiadas serão consideradas plágio.
 
 7. **Coesão:** O RNF e método de validação devem manter a coesão dentro da 
 documentação do grupo. O método de apresentação e estilo de escrita não podem 
 ser diferentes entre os RNFs descritos.
 
-## 3. Entrega 
+## 4. Entrega 
 
 A entrega da atividade deverá ser feita em dois ambientes:
 
