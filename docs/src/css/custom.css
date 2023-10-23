@@ -62,3 +62,12 @@
   padding: 0 var(--ifm-pre-padding);
   border-left: 3px solid #ff000080;
 }
+
+.grid-container {
+  display: grid;
+  height: 30px;
+  grid-template-columns: 1fr 3fr;
+  gap: 5px;
+}
+
+
