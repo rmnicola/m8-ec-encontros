@@ -1,6 +1,6 @@
 ---
 title: Elicitação de Requisitos
-sidebar_position: 10
+sidebar_position: 2
 ---
 
 # Requisitos de software
@@ -69,7 +69,19 @@ necessidades são valorizadas.
 
 [Requisitos não
 funcionais](https://www.altexsoft.com/blog/non-functional-requirements/)
-
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://www.youtube.com/embed/fc-5HJPBZMQ" 
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
 :::
 
 O artigo acima aborda os requisitos não funcionais (RNFs) em software e
