@@ -3,7 +3,7 @@ title: Atividade ponderada 1
 sidebar_position: 3
 ---
 
-# Documentação de requisito não funcional
+# <img src={require('/img/ponderada.png').default} width='35vw'/> Requisito não funcional
 
 ## 1. Objetivo
 Desenvolver a habilidade de definir requisitos não funcionais (RNFs) e criar 

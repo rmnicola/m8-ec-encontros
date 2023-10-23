@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 import Admonition from '@theme/Admonition';
 
-# Material do encontro 2
+# <img src={require('/img/instrucao.png').default} width='40vw' /> Material do encontro 2
 
 ## 1. Roteiro 
 1. Strategy pattern

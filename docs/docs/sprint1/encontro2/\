@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Admonition from '@theme/Admonition';
 
-# <img src={require('/img/autoestudo.png').default} width='35vw'/> Design patterns em Python
+# Design patterns em Python
 
 A utilização de *design patterns* é essencial para promover o baixo acoplamento 
 e a alta coesão em sistemas de software. Padrões como Singleton, Factory,
@@ -23,7 +23,7 @@ manter.
 ## 1. Strategy pattern 
 <Admonition 
     type="info" 
-    icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
+    icon=<img src={require('/img/autoestudo.png').default} width='15vw' />
     title="Autoestudo">
 
 <div style={{ textAlign: 'center' }}>
@@ -41,6 +41,24 @@ manter.
 </div>
 
 </Admonition>
+
+:::info Autoestudo
+
+Strategy pattern em Python
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://www.youtube.com/embed/WQ8bNdxREHU" 
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
+:::
 
 O **Strategy Pattern** é um padrão de projeto que permite que você defina uma
 família de algoritmos, encapsule cada um deles e os torne intercambiáveis. Isso
@@ -231,12 +249,9 @@ concretas, mas sim de uma classe abstrata para a sua implementação.
 As duas estratégias são comumente utilizadas juntas.
 
 ## 2. Observer pattern 
+:::info Autoestudo
 
-<Admonition 
-    type="info" 
-    icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
-    title="Autoestudo">
-
+Observer pattern em Python
 <div style={{ textAlign: 'center' }}>
     <iframe 
         style={{
@@ -251,7 +266,7 @@ As duas estratégias são comumente utilizadas juntas.
     </iframe>
 </div>
 
-</Admonition>
+:::
 
 O **Observer Pattern** é um padrão de projeto que define uma dependência entre
 objetos, de modo que quando um objeto muda de estado, todos os seus dependentes

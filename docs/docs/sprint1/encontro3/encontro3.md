@@ -1,10 +1,10 @@
 ---
 title: Encontro 3
-sidebar_position: 12
+sidebar_position: 3
 ---
 import Admonition from '@theme/Admonition';
 
-# Material do encontro 3
+# <img src={require('/img/instrucao.png').default} width='40vw'/> Material do encontro 3
 
 ## 1. Roteiro 
 <Admonition 

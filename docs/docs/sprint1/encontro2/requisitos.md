@@ -2,8 +2,9 @@
 title: Elicitação de Requisitos
 sidebar_position: 2
 ---
+import Admonition from '@theme/Admonition';
 
-# Requisitos de software
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Requisitos de software
 
 ## 1. Requisitos funcionais
 
@@ -65,10 +66,14 @@ necessidades são valorizadas.
 
 ## 2. Requisitos não funcionais
 
-:::info Autoestudo
+<Admonition 
+    type="info" 
+    icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
+    title="Autoestudo">
 
 [Requisitos não
 funcionais](https://www.altexsoft.com/blog/non-functional-requirements/)
+
 <div style={{ textAlign: 'center' }}>
     <iframe 
         style={{
@@ -82,7 +87,8 @@ funcionais](https://www.altexsoft.com/blog/non-functional-requirements/)
         allowFullScreen>
     </iframe>
 </div>
-:::
+
+</Admonition>
 
 O artigo acima aborda os requisitos não funcionais (RNFs) em software e
 sistemas. Ele pode ser resumido da seguinte maneira: 
