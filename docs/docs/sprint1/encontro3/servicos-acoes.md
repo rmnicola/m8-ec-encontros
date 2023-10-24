@@ -2,11 +2,11 @@
 title: Serviços e Ações
 sidebar_position: 3
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import Admonition from '@theme/Admonition';
 
-# <img src={require('/img/opcional.png').default} width='35vw'/> Serviços e
-Ações em ROS
-2
+# <img src={require('/img/opcional.png').default} width='35vw'/> Serviços e Ações em ROS 2
 
 ## 1. Serviços
 
@@ -139,3 +139,11 @@ Para enviar um objetivo para uma ação, use o comando:
 ros2 action send_goal <nome_da_ação> <tipo_da_ação> <valores>
 ```
 Você pode adicionar a opção `--feedback` para ver o feedback contínuo da ação.
+
+## 3. Exemplos
+
+<Admonition 
+    type="note" 
+    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
+    title="Work in progress">
+</Admonition>

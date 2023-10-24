@@ -7,7 +7,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Admonition from '@theme/Admonition';
 
-# Configurações do ambiente
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Configurações do ROS
 
 ![](/img/ros2_overlay.webp)
 
