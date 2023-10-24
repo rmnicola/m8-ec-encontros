@@ -7,6 +7,11 @@ sidebar_position: 2
 
 ## 1. Script de instalação automática
 
+Antes de mais nada, garanta que o git está instalado com:
+```bash
+sudo apt install git -y
+```
+
 Para facilitar o processo de instalação do ROS 2 Humble, é possível utilizar 
 um script feito por um bom samaritano. Para tal, clone o repositório onde esta
 o script:
