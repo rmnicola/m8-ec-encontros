@@ -1,6 +1,6 @@
 ---
 title: Utilizando o TF2
-sidebar_position: 5
+sidebar_position: 1
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -94,8 +94,8 @@ scanner.
 de trabalho e um pacote no
 ROS.
 3. **Tarefas**:
-   - **Criar um pacote**: Um pacote chamado `learning_tf2_py` é criado, que será
-usado neste tutorial e nos seguintes.
+   - **Criar um pacote**: Um pacote chamado `learning_tf2_py` é criado, que
+     será usado neste tutorial e nos seguintes.
    - **Escrever o nó broadcaster estático**: O código é fornecido para criar um
 broadcaster estático que publica a transformação de um frame "world" para um
 frame de tartaruga estática.
@@ -111,3 +111,9 @@ linha de comando ou como um nó em arquivos de
 lançamento.
 
 ## 3. Listeners 
+
+<Admonition 
+    type="note" 
+    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
+    title="Work in progress">
+</Admonition>
