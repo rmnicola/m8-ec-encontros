@@ -1,9 +1,9 @@
 ---
 title: Trabalhando com branches
-sidebar_position: 6
+sidebar_position: 5
 ---
 
-# Boas Práticas ao Trabalhar com Branches: Pull e Rebase
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Boas Práticas ao Trabalhar com Branches: Pull e Rebase
 
 Trabalhar com branches é uma abordagem comum e fundamental quando se utiliza sistemas de controle de versão como o Git. Porém, quando múltiplas pessoas estão colaborando em um mesmo projeto, é comum encontrar situações em que dois ou mais contribuidores modificam a mesma parte de um arquivo, levando a conflitos de merge durante um pull request. Este documento aborda boas práticas para se trabalhar com branches, focando especialmente em `pull` e `rebase` para evitar esses conflitos.
 

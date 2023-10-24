@@ -1,9 +1,9 @@
 ---
 title: Setup ambiente dev
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# Setup de ferramentas de desenvolvimento
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Setup de ferramentas de desenvolvimento
 
 Nesta seção estão algumas das ferramentas de desenvolvimento para tornar a 
 vida de vocês um pouco mais fácil (e a vida no terminal ficar mais confortável)
@@ -48,7 +48,13 @@ novamente.
 ### 1.2. Reproduzindo a minha configuração
 
 Para reproduzir a minha configuração, vamos começar clonando o meu repositório
-de scripts:
+de scripts. Para isso, deve-se instalar o git:
+
+```bash
+sudo apt install git -y
+```
+
+A seguir, vamos clonar o repositório de scripts
 
 ```bash
 git clone https://github.com/rmnicola/Scripts.git 
@@ -64,7 +70,7 @@ sudo ./install.sh
 Agora, retorne para o seu home e clone o repositório de arquivos de configuração:
 
 ```bash
-git clone https://github.com/rmnicola/Dotfiles.git
+git clone https://github.com/rmnicola/Dotfiles.git --recurse-submodules
 ```
 
 Entre na pasta e rode o meu script de configuração dos dotfiles. Esse script vai

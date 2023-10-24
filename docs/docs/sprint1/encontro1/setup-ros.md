@@ -1,9 +1,9 @@
 ---
 title: Instalação do ROS
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# Instalação do ROS 2 Humble
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Instalação do ROS 2 Humble
 
 ## 1. Script de instalação automática
 
