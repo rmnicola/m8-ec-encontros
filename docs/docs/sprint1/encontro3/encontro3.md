@@ -7,11 +7,10 @@ import Admonition from '@theme/Admonition';
 # <img src={require('/img/instrucao.png').default} width='40vw'/> Material do encontro 3
 
 ## 1. Roteiro 
-<Admonition 
-    type="note" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress">
-</Admonition>
+1. Revisão dos conceitos básicos de ROS
+2. Quatérnios
+3. TF2
+4. Atividade prática com turtlesim
 
 ## 2. Slides 
 
