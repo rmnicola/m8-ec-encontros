@@ -1,9 +1,9 @@
 ---
 title: Instalação do Ubuntu
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# Instalação do Ubuntu em cartão SD
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Instalação do Ubuntu em cartão SD
 
 ## 1. Criando um pen drive de boot
 

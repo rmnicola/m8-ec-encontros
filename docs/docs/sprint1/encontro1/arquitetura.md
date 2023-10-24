@@ -2,16 +2,14 @@
 title: Engenharia de software
 sidebar_position: 5
 ---
+import Admonition from '@theme/Admonition';
 
-# Acoplamento e Coesão em Engenharia de Software
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Acoplamento e Coesão em Engenharia de Software
 
-:::info Autoestudo
-
-Coesão e acoplamento
-
-:::
-
-**Autoestudo de coesão e acoplamento**
+<Admonition 
+    type="info" 
+    icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
+    title="Autoestudo">
 
 <div style={{ textAlign: 'center' }}>
     <iframe 
@@ -26,7 +24,8 @@ Coesão e acoplamento
         allowFullScreen>
     </iframe>
 </div>
-<br/>
+
+</Admonition>
 
 O desenvolvimento de software eficaz e sustentável depende muito de como as 
 partes individuais do software interagem entre si. Dois conceitos centrais nesse

@@ -1,9 +1,9 @@
 ---
 title: Docusaurus
-sidebar_position: 7
+sidebar_position: 6
 ---
 
-# Introdução ao Docusaurus
+# <img src={require('/img/autoestudo.png').default} width='35vw'/> Introdução ao Docusaurus
 
 Ficou curioso sobre como eu fiz essa página? Seus problemas acabaram! Nessa seção, 
 será apresentado o framework open source para documentação desenvolvido pela 
