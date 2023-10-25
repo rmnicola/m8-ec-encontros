@@ -16,8 +16,16 @@ import Admonition from '@theme/Admonition';
 
 ## 2. Slides 
 
-<Admonition 
-    type="note" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress">
-</Admonition>
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://slides.com/rodrigomangoninicola/m8-ec-encontro2/fullscreen"
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
