@@ -1,6 +1,6 @@
 ---
 title: Serviços e Ações
-sidebar_position: 3
+sidebar_position: 1
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
