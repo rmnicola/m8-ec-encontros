@@ -24,7 +24,7 @@ import Admonition from '@theme/Admonition';
             width: '100%',
             height: '50vh',
         }}
-        src="https://slides.com/rodrigomangoninicola/m8-ec-encontro2-1d19a3/fullscreen"
+        src="https://slides.com/rodrigomangoninicola/m8-ec-encontro-2-1d19a3/fullscreen"
         frameborder="0" 
         allowFullScreen>
     </iframe>
