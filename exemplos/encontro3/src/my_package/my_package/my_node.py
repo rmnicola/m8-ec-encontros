@@ -1,5 +1,5 @@
 def main():
-    print('Hi from my_package.')
+    print('Hi from package.')
 
 
 if __name__ == '__main__':
