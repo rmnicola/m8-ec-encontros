@@ -8,17 +8,25 @@ import Admonition from '@theme/Admonition';
 
 ## 1. Roteiro 
 1. Revisão dos conceitos básicos de ROS
-2. Quatérnios
-3. TF2
-4. Atividade prática com turtlesim
+2. Atividade prática c/ turtlesim
+3. Criação de pacotes
+4. Quatérnios
 
 ## 2. Slides 
 
-<Admonition 
-    type="note" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress">
-</Admonition>
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://slides.com/rodrigomangoninicola/m8-ec-encontro-3/fullscreen"
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
 
 ## 3. Exemplos
 
