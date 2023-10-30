@@ -12,7 +12,7 @@ import Admonition from '@theme/Admonition';
 
 <Admonition 
     type="info" 
-    icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
+    icon=<img src={require('/img/opcional.png').default} width='20vw' />
     title="Autoestudo">
 
 [Introdução ao
@@ -64,7 +64,7 @@ ação.
 
 <Admonition 
     type="info" 
-    icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
+    icon=<img src={require('/img/opcional.png').default} width='20vw' />
     title="Autoestudo">
 
 [Criando um Broadcaster
@@ -111,7 +111,23 @@ lançamento.
 ## 3. Listeners 
 
 <Admonition 
-    type="note" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress">
+    type="info" 
+    icon=<img src={require('/img/opcional.png').default} width='20vw' />
+    title="Autoestudo">
+
+[Criando um Broadcaster
+](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html)
+
+</Admonition>
+
+## 4. Usando tempo com tf2
+
+<Admonition 
+    type="info" 
+    icon=<img src={require('/img/opcional.png').default} width='20vw' />
+    title="Autoestudo">
+
+[Criando um Broadcaster
+](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Py.html)
+
 </Admonition>
