@@ -264,5 +264,204 @@ elas. Veja o `gif` abaixo para uma referência visual do processo:
 <Admonition 
     type="note" 
     icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress...">
+    title="Vídeo em breve...">
 </Admonition>
+
+O Simple Commander é uma API feita em Python para interagir com as ações e
+serviços do Nav2 sem precisar criar os nós para isso diretamente. Com ele, é
+possível setar a pose inicial, passar pontos como objetivo e até mesmo criar
+uma lista de pontos pelos quais o robô obrigatoriamente deve passar.
+
+### 4.1. Setup simple commander 
+
+Para fazer o setup do simple commander, vamos precisar instalar alguns pacotes. Rode:
+
+```bash
+sudo apt install ros-humble-nav2-simple-commander ros-humble-tf-transformations python3-transforms3d
+```
+
+O `ros-humble-nav2-simple-commander` é a API em si, já o
+`ros-humble-tf-transformations` e `python3-transforms3d` são duas bibliotecas
+que permitem fazer transformações entre quaternions e ângulos de Euler, que é
+algo útil para trabalhar com a pose de forma intuitiva.
+
+### 4.2. Enviando a pose inicial
+
+A seguir, vamos criar um script para utilizar o simple commander. Para isso,
+crie um novo arquivo com:
+
+```bash
+touch nav2_test.py 
+chmod +x nav2_test.py
+```
+
+O conteúdo desse arquivo pode ser visto abaixo:
+
+```python showLineNumbers title="nav2_test.py"
+#! /usr/bin/env python3 
+import rclpy
+from nav2_simple_commander.robot_navigator import BasicNavigator
+from geometry_msgs.msg import PoseStamped
+from tf_transformations import quaternion_from_euler
+
+rclpy.init()
+nav = BasicNavigator()
+q_x, q_y, q_z, q_w = quaternion_from_euler(0.0, 0.0, 0.0)
+initial_pose = PoseStamped()
+initial_pose.header.frame_id = 'map'
+initial_pose.header.stamp = nav.get_clock().now().to_msg()
+initial_pose.pose.position.x = 0.0
+initial_pose.pose.position.y = 0.0
+initial_pose.pose.position.z = 0.0
+initial_pose.pose.orientation.x = q_x
+initial_pose.pose.orientation.y = q_y
+initial_pose.pose.orientation.z = q_z
+initial_pose.pose.orientation.w = q_w
+
+nav.setInitialPose(initial_pose)
+nav.waitUntilNav2Active()
+
+rclpy.shutdown()
+```
+
+O vídeo abaixo demonstra o funcionamento desse script:
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <ReactPlayer playing controls
+    url={require('/video/initial_pose.webm').default} width="100%"/>
+</div>
+<br/>
+
+:::tip Dica 
+
+Apesar de usarmos um script simples nesse exemplo, o mais indicado é criar um
+pacote em um workspace ROS para lidar com o simple commander
+
+:::
+
+### 4.3. Navegando até pose
+
+Vamos criar agora um novo script, agora para enviar uma pose como objetivo para
+o Nav2. Crie o arquivo com:
+
+```bash
+touch nav2_go_to_pose.py 
+chmod +x nav2_go_to_pose.py
+```
+
+E preencha o arquivo com: 
+
+```python showLineNumbers title="nav2_go_to_pose.py"
+#! /usr/bin/env python3 
+import rclpy
+from nav2_simple_commander.robot_navigator import BasicNavigator
+from geometry_msgs.msg import PoseStamped
+from tf_transformations import quaternion_from_euler
+from math import pi
+
+rclpy.init()
+nav = BasicNavigator()
+q_x, q_y, q_z, q_w = quaternion_from_euler(0.0, 0.0, pi/4)
+goal_pose = PoseStamped()
+goal_pose.header.frame_id = 'map'
+goal_pose.header.stamp = nav.get_clock().now().to_msg()
+goal_pose.pose.position.x = 1.0
+goal_pose.pose.position.y = 0.0
+goal_pose.pose.position.z = 0.0
+goal_pose.pose.orientation.x = q_x
+goal_pose.pose.orientation.y = q_y
+goal_pose.pose.orientation.z = q_z
+goal_pose.pose.orientation.w = q_w
+
+nav.goToPose(goal_pose)
+while not nav.isTaskComplete():
+    print(nav.getFeedback())
+
+rclpy.shutdown()
+```
+
+O vídeo abaixo exemplifica o comportamento do script:
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <ReactPlayer playing controls
+    url={require('/video/nav_go_pose.webm').default} width="100%"/>
+</div>
+<br/>
+
+:::tip Dica
+
+Note que, embora os scripts estejam fazendo dois passos separadamente, é
+possível criar apenas um script que configura a pose inicial e manda um
+objetivo ao nav2
+
+:::
+
+### 4.4. Navegando através de waypoints
+
+Vamos agora criar um terceiro exemplo. Nesse, vamos trabalhar com vários
+waypoints e o nav2 fazendo com que o robô vá para cada um deles em sequência.
+Vamos criar o arquivo:
+
+```bash
+touch nav_waypoints.py 
+chmod +x nav_waypoints.py
+```
+
+E vamos preencher ele com:
+
+<Tabs defaultValue="waypoints" values={[
+        {label: 'Script', value: 'waypoints'},
+        {label: 'Função p/ criar poses', value: 'posefunc'},
+  ]}>
+
+<TabItem value="waypoints">
+
+```python showLineNumbers title="nav_waypoints.py"
+#! /usr/bin/env python3 
+import rclpy
+from nav2_simple_commander.robot_navigator import BasicNavigator
+from geometry_msgs.msg import PoseStamped
+from tf_transformations import quaternion_from_euler
+from math import pi
+
+rclpy.init()
+nav = BasicNavigator()
+goal_pose1 = create_pose_stamped(nav, 2.5, 1.0, 1.57)
+goal_pose2 = create_pose_stamped(nav, 0.0, 1.0, 1.57)
+goal_pose3 = create_pose_stamped(nav, 0.0, 0.0, 0.00)
+
+waypoints = [goal_pose1, goal_pose2, goal_pose3]
+
+nav.followWaypoints(waypoints)
+while not nav.isTaskComplete():
+    print(nav.getFeedback())
+
+rclpy.shutdown()
+```
+
+</TabItem>
+
+<TabItem value="posefunc">
+
+```python showLineNumbers title="nav_waypoints::create_pose_stamped"
+def create_pose_stamped(navigator, pos_x, pos_y, rot_z):
+    q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, rot_z)
+    pose = PoseStamped()
+    pose.header.frame_id = 'map'
+    pose.header.stamp = nav.get_clock().now().to_msg()
+    pose.pose.position.x = pos_x
+    pose.pose.position.y = pos_y
+    pose.pose.position.z = pos_x
+    pose.pose.orientation.x = q_x
+    pose.pose.orientation.y = q_y
+    pose.pose.orientation.z = q_z
+    pose.pose.orientation.w = q_w
+    return pose
+```
+
+</TabItem>
+
+</Tabs>
+
+Note que trata-se basicamente do exemplo anterior, porém com uma lista de
+pontos chamada `waypoints`.
