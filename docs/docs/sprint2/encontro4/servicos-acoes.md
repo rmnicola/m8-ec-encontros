@@ -4,6 +4,7 @@ sidebar_position: 1
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import ReactPlayer from 'react-player'
 import Admonition from '@theme/Admonition';
 
 # <img src={require('/img/opcional.png').default} width='35vw'/> Serviços e Ações em ROS 2
@@ -142,8 +143,324 @@ Você pode adicionar a opção `--feedback` para ver o feedback contínuo da aç
 
 ## 3. Exemplos
 
-<Admonition 
-    type="note" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress">
-</Admonition>
+### 3.1. Serviços 
+
+Vamos criar dois arquivos, um para o server e outro para o client:
+
+```bash
+touch ros_server.py ros_client.py
+chmod +x ros_server.py ros_client.py
+```
+
+O conteúdo dos dois arquivos pode ser visto abaixo:
+
+<Tabs defaultValue="server" values={[
+        {label: 'Servidor', value: 'server'},
+        {label: 'Cliente', value: 'client'},
+  ]}>
+
+<TabItem value="server">
+
+```python showLineNumbers title="ros_server.py"
+from example_interfaces.srv import AddTwoInts
+
+import rclpy
+
+g_node = None
+
+
+def add_two_ints_callback(request, response):
+    global g_node
+    response.sum = request.a + request.b
+    g_node.get_logger().info(
+        'Incoming request\na: %d b: %d' % (request.a, request.b))
+
+    return response
+
+
+def main(args=None):
+    global g_node
+    rclpy.init(args=args)
+
+    g_node = rclpy.create_node('minimal_service')
+
+    srv = g_node.create_service(AddTwoInts, 'add_two_ints', add_two_ints_callback)
+    while rclpy.ok():
+        rclpy.spin_once(g_node)
+
+    # Destroy the service attached to the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    g_node.destroy_service(srv)
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+</TabItem>
+
+<TabItem value="client">
+
+```python showLineNumbers title="ros_client.py"
+from example_interfaces.srv import AddTwoInts
+
+import rclpy
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = rclpy.create_node('minimal_client')
+    cli = node.create_client(AddTwoInts, 'add_two_ints')
+
+    req = AddTwoInts.Request()
+    req.a = 41
+    req.b = 1
+    while not cli.wait_for_service(timeout_sec=1.0):
+        node.get_logger().info('service not available, waiting again...')
+
+    future = cli.call_async(req)
+    rclpy.spin_until_future_complete(node, future)
+
+    result = future.result()
+    node.get_logger().info(
+        'Result of add_two_ints: for %d + %d = %d' %
+        (req.a, req.b, result.sum))
+
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+</TabItem>
+
+</Tabs>
+
+O vídeo abaixo exemplifica o comportamento dos dois scripts:
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <ReactPlayer playing controls
+    url={require('/video/service.webm').default} width="100%"/>
+</div>
+<br/>
+
+:::tip Dica
+
+Note que, para usar um serviço, você precisa utilizar um `request` disponível
+nos módulos padrão do ROS ou em algum dos que tem instalado. Como um exemplo,
+para ver a lista de requests relacionados ao turtlesim, podemos usar:
+
+```bash
+ls /opt/ros/humble/share/turtlesim*/**/*.srv
+```
+
+Basta substituir `turtlesim*` por qualquer pacote que exista no diretório
+`/opt/ros/humble/share`
+
+:::
+
+### 3.2. Ações
+
+Vamos criar dois arquivos, um para o server e outro para o client:
+
+```bash
+touch action_server.py action_client.py
+chmod +x action_server.py action_client.py
+```
+
+O conteúdo dos dois arquivos pode ser visto abaixo:
+
+<Tabs defaultValue="server" values={[
+        {label: 'Servidor', value: 'server'},
+        {label: 'Cliente', value: 'client'},
+  ]}>
+
+<TabItem value="server">
+
+```python showLineNumbers title="action_server.py"
+#! /usr/bin/env python3
+import time
+
+from example_interfaces.action import Fibonacci
+
+import rclpy
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.node import Node
+
+
+class MinimalActionServer(Node):
+
+    def __init__(self):
+        super().__init__('minimal_action_server')
+
+        self._action_server = ActionServer(
+            self,
+            Fibonacci,
+            'fibonacci',
+            execute_callback=self.execute_callback,
+            callback_group=ReentrantCallbackGroup(),
+            goal_callback=self.goal_callback,
+            cancel_callback=self.cancel_callback)
+
+    def destroy(self):
+        self._action_server.destroy()
+        super().destroy_node()
+
+    def goal_callback(self, goal_request):
+        """Accept or reject a client request to begin an action."""
+        # This server allows multiple goals in parallel
+        self.get_logger().info('Received goal request')
+        return GoalResponse.ACCEPT
+
+    def cancel_callback(self, goal_handle):
+        """Accept or reject a client request to cancel an action."""
+        self.get_logger().info('Received cancel request')
+        return CancelResponse.ACCEPT
+
+    async def execute_callback(self, goal_handle):
+        """Execute a goal."""
+        self.get_logger().info('Executing goal...')
+
+        # Append the seeds for the Fibonacci sequence
+        feedback_msg = Fibonacci.Feedback()
+        feedback_msg.sequence = [0, 1]
+
+        # Start executing the action
+        for i in range(1, goal_handle.request.order):
+            if goal_handle.is_cancel_requested:
+                goal_handle.canceled()
+                self.get_logger().info('Goal canceled')
+                return Fibonacci.Result()
+
+            # Update Fibonacci sequence
+            feedback_msg.sequence.append(feedback_msg.sequence[i] + feedback_msg.sequence[i-1])
+
+            self.get_logger().info('Publishing feedback: {0}'.format(feedback_msg.sequence))
+
+            # Publish the feedback
+            goal_handle.publish_feedback(feedback_msg)
+
+            # Sleep for demonstration purposes
+            time.sleep(1)
+
+        goal_handle.succeed()
+
+        # Populate result message
+        result = Fibonacci.Result()
+        result.sequence = feedback_msg.sequence
+
+        self.get_logger().info('Returning result: {0}'.format(result.sequence))
+
+        return result
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    minimal_action_server = MinimalActionServer()
+
+    # Use a MultiThreadedExecutor to enable processing goals concurrently
+    executor = MultiThreadedExecutor()
+
+    rclpy.spin(minimal_action_server, executor=executor)
+
+    minimal_action_server.destroy()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+</TabItem>
+
+<TabItem value="client">
+
+```python showLineNumbers title="action_client.py"
+#! /usr/bin/env python3
+from action_msgs.msg import GoalStatus
+from example_interfaces.action import Fibonacci
+
+import rclpy
+from rclpy.action import ActionClient
+from rclpy.node import Node
+
+
+class MinimalActionClient(Node):
+
+    def __init__(self):
+        super().__init__('minimal_action_client')
+        self._action_client = ActionClient(self, Fibonacci, 'fibonacci')
+
+    def goal_response_callback(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info('Goal rejected :(')
+            return
+
+        self.get_logger().info('Goal accepted :)')
+
+        self._get_result_future = goal_handle.get_result_async()
+        self._get_result_future.add_done_callback(self.get_result_callback)
+
+    def feedback_callback(self, feedback):
+        self.get_logger().info('Received feedback: {0}'.format(feedback.feedback.sequence))
+
+    def get_result_callback(self, future):
+        result = future.result().result
+        status = future.result().status
+        if status == GoalStatus.STATUS_SUCCEEDED:
+            self.get_logger().info('Goal succeeded! Result: {0}'.format(result.sequence))
+        else:
+            self.get_logger().info('Goal failed with status: {0}'.format(status))
+
+        # Shutdown after receiving a result
+        rclpy.shutdown()
+
+    def send_goal(self):
+        self.get_logger().info('Waiting for action server...')
+        self._action_client.wait_for_server()
+
+        goal_msg = Fibonacci.Goal()
+        goal_msg.order = 10
+
+        self.get_logger().info('Sending goal request...')
+
+        self._send_goal_future = self._action_client.send_goal_async(
+            goal_msg,
+            feedback_callback=self.feedback_callback)
+
+        self._send_goal_future.add_done_callback(self.goal_response_callback)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    action_client = MinimalActionClient()
+
+    action_client.send_goal()
+
+    rclpy.spin(action_client)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+</TabItem>
+
+</Tabs>
+
+O vídeo abaixo exemplifica o comportamento dos dois scripts:
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <ReactPlayer playing controls
+    url={require('/video/acoes.webm').default} width="100%"/>
+</div>
+<br/>
