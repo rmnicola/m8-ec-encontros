@@ -91,7 +91,7 @@ podemos ver que o arquivo `/etc/zsh/zshenv` é ideal para este tipo de setup.
 Vamos adicionar essa definição utilizando o comando abaixo:
 
 ```bash
-echo "ZDOTDIR=$HOME/.config/zsh" >> /etc/zsh/zshenv
+echo "ZDOTDIR=$HOME/.config/zsh" | sudo tee -a /etc/zsh/zshenv
 ```
 
 
