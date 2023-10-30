@@ -2,6 +2,8 @@
 title: Instalação do ROS
 sidebar_position: 2
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # <img src={require('/img/autoestudo.png').default} width='35vw'/> Instalação do ROS 2 Humble
 
@@ -44,9 +46,41 @@ cd Scripts
 sudo ./install.sh
 ```
 
-Após a instalação, não se esqueça de adicionar 
-`source /opt/ros/humble/setup.xxx` ao arquivo de configuração do seu shell,
-substituindo o `xxx` pela extensão adequada. (mais comuns bash e zsh)
+Após a instalação, não se esqueça de adicionar `source
+/opt/ros/humble/setup.xxx` ao arquivo de configuração do seu shell,
+substituindo o `xxx` pela extensão adequada. (mais comuns bash e zsh). Veja
+abaixo:
+
+<Tabs defaultValue="bash" values={[
+        {label: 'Bash', value: 'bash'},
+        {label: 'Zsh', value: 'zsh'},
+        {label: 'Zsh com a minha config.', value: 'zsh-meu'},
+  ]}>
+
+<TabItem value="bash">
+
+```bash
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+```
+
+</TabItem>
+
+<TabItem value="zsh">
+
+```bash
+echo "source /opt/ros/humble/setup.zsh" >> ~/.zshrc
+```
+
+</TabItem>
+
+<TabItem value="zsh-meu">
+
+```bash
+echo "source /opt/ros/humble/setup.zsh" >> '$ZODTDIR'/.zshrc
+```
+
+</TabItem>
+</Tabs>
 
 ## 2. Na raça
 
