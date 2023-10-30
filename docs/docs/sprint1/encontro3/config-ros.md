@@ -135,3 +135,13 @@ ROS_LOCALHOST_ONLY=0
 ROS_PYTHON_VERSION=3
 ROS_VERSION=2
 ```
+
+### 3.1. ROS_DOMAIN_ID
+
+Para configurar a funcionalidade de rede do ROS, é necessário setar uma
+variável de ambiente chamada `ROS_DOMAIN_ID`. Essa variável é responsável por
+definir internamente a porta UDP que será utilizada pelo DDS (camada do ROS
+responsável pela comunicação em rede). Sendo assim, caso queira que seus nós
+comuniquem-se com nós em outro dispositivo, deve-se configurar ambos para usar
+o mesmo `ROS_DOMAIN_ID`. A saber, os endereços recomentados para essa variável
+estão entre `0` e `121` ou entre `215` e `232`.
