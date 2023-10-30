@@ -1,6 +1,6 @@
 ---
 title: Atividade ponderada 2
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # <img src={require('/img/ponderada.png').default} width='35vw'/> Navegação com o turtlebot
