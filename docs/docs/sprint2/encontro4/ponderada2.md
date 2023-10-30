@@ -27,10 +27,11 @@ atividade.
    navegação;
 3. No README do repositório deve ter instruções claras de como instalar e rodar
    o pacote criado, com comandos em blocos de código e uma explicação sucinta
-   do que fazem; e
+   do que fazem;
 4. Ainda no README, deve haver um vídeo gravado demonstrando plenamente o
    funcionamento do sistema completo, mostrando tanto o mapeamento quanto a
-   navegação.
+   navegação; e
+5. O prazo para a entrega desta atividade é até o dia 12/10/2023 às 23h59min.
 
 :::tip Dica
 
