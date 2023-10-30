@@ -6,9 +6,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Admonition from '@theme/Admonition';
 
-# <img src={require('/img/autoestudo.png').default} width='35vw'/> Utilizando
-transformadas em
-ROS2
+# <img src={require('/img/opcional.png').default} width='35vw'/> Utilizando transformadas em ROS2
 
 ## 1. Introdução ao TF2 
 
