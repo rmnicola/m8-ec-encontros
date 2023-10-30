@@ -46,6 +46,9 @@ O sistema desenvolvido deve:
 1. Comprovadamente ser capaz de mapear de forma fidedigna um ambiente (simulado
    ou real) - até 3,0 pontos;
 2. Ser capaz de navegar em um ambiente pré-mapeado **de forma programática** -
-   até 4,0 pontos; 
+   até 3,0 pontos; 
 3. Ser capaz de desviar de obstáculos de forma dinâmica (obstáculos não
    mapeados) - até 3,0 pontos; 
+4. O sistema deve ser [idempotente](https://pagar.me/blog/idempotencia/). Isso
+   significa, na prática, que mesmo rodando várias vezes o navegador, ele vai
+   passar pelos mesmos pontos (sem tentar inicializar a pose duas vezes) - até 1,0 ponto;
