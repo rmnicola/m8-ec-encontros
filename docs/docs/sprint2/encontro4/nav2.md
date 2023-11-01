@@ -156,7 +156,7 @@ ignore a próxima instrução. Não está com o robô? Beleza também, pois pode
 usar o Gazebo. Para isso, rode o seguinte comando:
 
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_world_launch.py
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
 :::caution Atenção
@@ -212,7 +212,7 @@ nenhum ponto indefinido, você pode salvá-lo no seu computador para usar mais
 para frente durante a navegação. Para isso, rode: 
 
 ```bash 
-ros2 run nav2_map_saver map_saver_cli -f <nome-do-mapa>
+ros2 run nav2_map_server map_saver_cli -f <nome-do-mapa>
 ```
 
 Substitua o `nome-do-mapa` pelo local onde quer gravar seu mapa. Eu coloquei
