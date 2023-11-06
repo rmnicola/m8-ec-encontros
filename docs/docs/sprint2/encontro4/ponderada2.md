@@ -31,7 +31,7 @@ atividade.
 4. Ainda no README, deve haver um vídeo gravado demonstrando plenamente o
    funcionamento do sistema completo, mostrando tanto o mapeamento quanto a
    navegação; e
-5. O prazo para a entrega desta atividade é até o dia 12/10/2023 às 23h59min.
+5. O prazo para a entrega desta atividade é até o dia 12/11/2023 às 23h59min.
 
 :::tip Dica
 
