@@ -87,17 +87,12 @@ criar o nosso próprio pacote agora?
 
 ## 2. Criando pacotes em ROS
 
+### 2.1. Criando um pacote pré-preenchido
+
 Para criar nosso pacote, vamos utilizar o seguinte comando:
 
 ```bash 
 ros2 pkg create --build-type ament_python --node-name my_node my_package
-```
-
-Note que a opção `node-name` faz com que o seu pacote já inicie com um exemplo
-simples de Olá Mundo. Caso queira um pacote verdadeiramente vazio, rode: 
-
-```bash 
-ros2 pkg create --build-type ament_python <nome_do_pacote>
 ```
 
 Como nosso pacote já veio com um exemplo, vamos só precisar dar build nele para
@@ -126,6 +121,101 @@ Pronto! Quer rodar seu pacote? Use:
 ```bash
 ros2 run my_package my_node
 ```
+
+### 2.2. Criando um pacote vazio e preenchendo com o seu nó
+
+Estando dentro da pasta `src` do seu workspace ROS, rode:
+
+```bash
+ros2 pkg create --build-type ament_python ola_mundo
+```
+
+Dessa vez, o pacote será criado sem nenhum script para ser rodado. Vamos
+configurar tudo na mão. Primeiro, crie um arquivo dentro da subpasta teste:
+
+```bash
+cd ola_mundo/ola_mundo
+touch ola.py
+```
+
+Vamos preencher esse arquivo com:
+
+```python showLineNumbers title="ola_mundo.py"
+def main():
+    print("Ola, mundo!")
+
+if __name__ == "__main__":
+    main()
+```
+
+Agora, vamos configurar os metadados do pacote para conseguir rodar usando o
+`ros2 run`. Primeiro, vamos mexer no arquivo `package.xml`, localizado na raíz
+do projeto `teste`. Nele, você deve editar os campos `<name>`, `<version>`,
+`<description>`, `<maintainer>` e `<license>`. Aqui, você também pode
+adicionar dependências de execução (controladas pelo `rosdep`). Exemplo:
+
+```bash
+<exec_depend>rclpy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+```
+
+Essas mudanças não são obrigatórias, mas é uma convenção que todos que criam
+pacotes seguem. A seguir, vamos mexer no arquivo `setup.py`. Deixe-o assim:
+
+```python showLineNumbers
+from setuptools import find_packages, setup
+
+package_name = 'ola_mundo'
+
+setup(
+    name=package_name,
+    version='0.0.0',
+    packages=find_packages(exclude=['test']),
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+# highlight-next-line
+    maintainer='seu-nome',
+# highlight-next-line
+    maintainer_email='seu-email',
+# highlight-next-line
+    description='sua-descrição',
+# highlight-next-line
+    license='CC0',
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [
+# highlight-next-line
+            "ola = ola_mundo.ola:main",
+        ],
+    },
+)
+```
+
+Note essa parte:
+```python
+'console_scripts': [
+    "ola = ola_mundo.ola:main",
+],
+```
+
+Aqui é onde você define os entry points do seu pacote. No caso, há um script de
+console chamado `ola`, que aciona o arquivo `ola` dentro do pacote `ola_mundo`,
+especificamente a função `main`.
+
+Agora, volte para a raíz do seu workspace e rode `colcon build` e de `source`
+no script de setup do workspace. A seguir, rode:
+
+```bash
+ros2 run ola_mundo ola
+```
+
+Pronto! Está tudo configurado e você agora tem um pacote que você mesmo
+configurou!
 
 ## 3. Criando launch files 
 
