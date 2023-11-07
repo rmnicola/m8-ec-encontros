@@ -7,11 +7,9 @@ import Admonition from '@theme/Admonition';
 # <img src={require('/img/instrucao.png').default} width='40vw'/> Material do encontro 5
 
 ## 1. Roteiro 
-<Admonition 
-    type="note" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress...">
-</Admonition>
+1. Retomando nav2 c/ webots
+2. Expressões regulares
+3. Chatbot simples
 
 ## 2. Slides 
 
@@ -28,3 +26,7 @@ import Admonition from '@theme/Admonition';
         allowFullScreen>
     </iframe>
 </div>
+
+## 3. Exemplos
+1. [chatbot
+   simples](https://github.com/rmnicola/m8-ec-encontros/tree/main/exemplos/encontro5/src/chatbot)
