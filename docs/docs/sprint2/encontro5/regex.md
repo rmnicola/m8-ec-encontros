@@ -65,6 +65,34 @@ Texto: `gato`
 Resultado: A regex `g.t` encontrará uma correspondência em "gat" de "gato",
 pois o ponto corresponde a qualquer caractere.
 
+**Tabela de metacaracteres**
+
+| Caractere | Descrição |
+|-----------|-----------|
+| `^`       | Indica o início de uma linha ou string. |
+| `$`       | Indica o final de uma linha ou string. |
+| `.`       | Corresponde a qualquer caractere, exceto quebra de linha. |
+| `[]`      | Denota um conjunto de caracteres permitidos. |
+| `|`       | Operador OR lógico para corresponder a expressões alternativas. |
+| `()`      | Grupo de captura para agrupar expressões e capturar substrings. |
+| `?`       | Torna o quantificador anterior opcional (0 ou 1 vez). |
+| `*`       | Quantificador que corresponde 0 ou mais vezes ao elemento anterior. |
+| `+`       | Quantificador que corresponde 1 ou mais vezes ao elemento anterior. |
+| `{}`      | Quantificador que especifica um número específico de vezes para o elemento anterior. |
+| `\`       | Usado como escape para caracteres especiais. |
+| `\d`      | Corresponde a qualquer dígito numérico (equivalente a [0-9]). |
+| `\D`      | Corresponde a qualquer caractere não-dígito. |
+| `\w`      | Corresponde a qualquer caractere alfanumérico, incluindo o sublinhado (equivalente a [a-zA-Z0-9_]). |
+| `\W`      | Corresponde a qualquer caractere não-alfanumérico. |
+| `\s`      | Corresponde a qualquer espaço em branco (espaços, tabs, quebras de linha). |
+| `\S`      | Corresponde a qualquer caractere não-espaço em branco. |
+| `\b`      | Indica um limite de palavra, ou seja, a posição onde começa ou termina uma palavra. |
+| `\B`      | Indica um ponto que não é um limite de palavra. |
+| `(?i)`    | Ativa a insensibilidade a maiúsculas e minúsculas. |
+| `(?m)`    | Ativa o modo multilinha, onde `^` e `$` correspondem ao início e fim de cada linha. |
+| `(?x)`    | Permite espaços e comentários em uma expressão regular para maior legibilidade. |
+
+
 #### 2.2.1. **Ponto (.)**: Corresponde a qualquer caractere, exceto quebra de linha.
 - **Regex**: `a.c`
 - **Texto**: `abc, adc, aec`
