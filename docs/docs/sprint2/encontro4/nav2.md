@@ -93,6 +93,14 @@ sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup "ros-humble-turt
 
 </Tabs>
 
+:::warning Alerta!
+
+Essa configuração tem que ser feita em todos os dispositivos que vão interagir
+diretamente com o robô. Ou seja, em cada computador que vai se comunicar com o
+robô e na raspberry pi embarcada. Não basta configurar apenas em um computador!
+
+:::
+
 Após isso, vamos mexer em uma configuração que pode nos causar problemas mais
 para frente quando formos interagir com o turtlebot, que é o algoritmo de DDS
 utilizado pelo ROS. Para isso, instale o seguinte pacote: 
@@ -239,7 +247,7 @@ usar os seguintes lançadores:
 
 ```bash
 # Se ainda estiver com o gazebo aberto, não precisa disso
-ros2 launch turtlebot3_gazebo turtlebot3_world_launch.py
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
 ```
 
 E:
@@ -465,3 +473,115 @@ def create_pose_stamped(navigator, pos_x, pos_y, rot_z):
 
 Note que trata-se basicamente do exemplo anterior, porém com uma lista de
 pontos chamada `waypoints`.
+
+## 5. Trocando o gazebo pelo webots
+
+O gazebo classic já é um software antigo e com suporte limitado. Sendo assim, é
+possível observar alguns bugs em sua execução. Uma alternativa mais moderna é o
+[webots](https://cyberbotics.com/). Segue um breve tutorial de como botar o
+webots para funcionar em conjunto com o nav2:
+
+### 5.1. Instalando o webots
+
+Para instalar o webots, vamos seguir o [tutorial
+oficial](https://cyberbotics.com/doc/guide/installation-procedure). Primeiro,
+vamos configurar a nova fonte do apt: 
+
+```bash
+sudo mkdir -p /etc/apt/keyrings
+cd /etc/apt/keyrings
+sudo wget -q https://cyberbotics.com/Cyberbotics.asc
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/Cyberbotics.asc] https://cyberbotics.com/debian binary-amd64/" | sudo tee /etc/apt/sources.list.d/Cyberbotics.list
+```
+
+A seguir, rode um `update` para ver se está tudo ok:
+
+```bash
+sudo apt update
+```
+
+Se o comando executar com sucesso, significa que estamos prontos para instalar
+o webots:
+
+```bash
+sudo apt install webots
+```
+
+Para finalizar, vamos instalar o pacote do ros2 para interagir com o webots:
+
+```bash
+sudo apt install ros-humble-webots-ros2
+```
+
+### 5.2. Rodando o nav2 com o webots
+
+Vamos rodar dois launchers aqui. Um para rodar o turtlebot no webots:
+
+```bash
+ros2 launch webots_ros2_turtlebot robot_launch.py
+```
+
+E outro para o mapeamento e navegação simultanea:
+
+```bash
+ros2 launch nav2_bringup tb3_simulation_launch.py slam:=True
+```
+
+:::tip Dica
+
+O lançador acima funciona também em conjunto com o Gazebo. Ele permite que você
+navegue e mapeie simultaneamente.
+
+:::
+
+Assim como no exemplo com o gazebo, para salvar o mapa rode:
+
+```bash
+ros2 run nav2_map_server map_saver_cli -f <caminho-arquivo-mapa>
+```
+
+Terminou de mapear e quer só navegar com um mapa já pronto? Rode o lançador do
+`nav2_bringup`, só que com essas opções:
+
+```bash
+ros2 launch nav2_bringup tb3_simulation_launch.py map:=<arquivo-do-mapa>.yaml
+```
+
+:::tip Dica
+
+Assim como no exemplo com o Gazebo, o `tb3_simulation_launch` conta com o
+argumento `use_sim_time`. Vale o teste se ele também não serve para comandar o
+robô real.
+
+:::
+
+### 5.3. Modificando o mundo padrão do webots
+
+Usando o launcher do `webots_ros2_turtlebot` é impossível modificar o mundo e
+salvá-lo, pois ele está dentro de uma pasta protegida contra escrita. Existem
+alguns meios de modificar o arquivo do mundo. Minha sugestão é uma rápida e
+suja. Primeiro, você deve abrir o webots:
+
+```bash
+webots
+```
+
+Agora, abra um mundo usando `Ctrl+Shift+O`. Você deve procurar pelo arquivo
+`/opt/ros/humble/share/webots_ros2_turtlebot/worlds/turtlebot3_burger_example.wbt`.
+Abra esse mundo. Agora, basta editar o mundo como quiser. Quando terminar,
+salve-o indo em `File->Save World As`. Salve o mundo novo em sua `home`. A
+seguir, feche o webots e vamos rodar mais alguns comandos:
+
+```bash
+sudo mv /opt/ros/humble/share/webots_ros2_turtlebot/worlds/turtlebot3_burger_example.wbt /opt/ros/humble/share/webots_ros2_turtlebot/worlds/turtlebot3_burger_example.wbt.bkup
+```
+
+Isso vai garantir que você não vai perder o mundo original. Agora, mova o
+arquivo que você salvou na `home` para a pasta de mundos do pacote:
+
+```bash
+sudo mv <novo-mundo-salvo>.wbt /opt/ros/humble/share/webots_ros2_turtlebot/worlds/turtlebot3_burger_example.wbt
+```
+
+Pronto! Agora, quando você rodar o launcher do webots com o turtlebot, o mundo
+que será carregado será o que você editou!
