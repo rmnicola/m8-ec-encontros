@@ -130,6 +130,18 @@ Essa instalação vai demorar alguns minutos, então tenha paciência =)
 
 Falta apenas uma coisa para termos o poder do ROS em nossas mãos: por padrão, o ROS não adiciona automaticamente todos os executáveis e variáveis de ambiente ao nosso sistema, mas existe um script que faz todo esse setup para nós. Como ninguém tem tempo de ficar dando source nesse script toda vez, rodem esse comando para garantir que tudo vai estar configurado sempre que você abrir o terminal do WSL:
 
+:::caution Aviso
+ 
+O comando abaixo vai reconfigurar seu bashrc para que, da proxima vez, ele
+consiga identificar os comandos do ROS. Caso não queira reiniciar o terminal,
+rode:
+
+```bash
+source ~./bashrc
+```
+ 
+:::
+
 ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
