@@ -60,6 +60,16 @@ depedências automaticamente.
 
 A seguir, vamos compilar o nosso pacote usando:
 
+:::caution Aviso
+
+Para executar o comando abaixo você precisa, antes, instalar o seguinte pacote:
+
+```bash
+sudo apt install python3-colcon-common-extensions
+```
+
+:::
+
 ```bash 
 colcon build
 ```
