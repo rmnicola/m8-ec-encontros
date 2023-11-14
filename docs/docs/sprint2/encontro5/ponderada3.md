@@ -37,7 +37,6 @@ atividade.
 
 1. A atividade deve ser feita em um repositório aberto no github. Seu link deve
    ser fornecido no card da adalove;
-2. O chatbot deve estar configurado 
 2. O repositório deve contar com um workspace ROS2 com pelo menos um nó
    configurado: o do chatbot. Sugere-se que utilize o mesmo workspace das
    outras atividades ponderadas.
