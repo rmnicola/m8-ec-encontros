@@ -18,4 +18,4 @@ def chat_with_gpt(prompt):
     return response.choices[0].message['content']
 
 # Exemplo de uso
-print(chat_with_gpt("Explique para que serve o partial. Dê um exemplo"))
+print(chat_with_gpt("Explique para que serve o partial em uma frase."))
