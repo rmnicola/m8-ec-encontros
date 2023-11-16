@@ -36,9 +36,17 @@ os comandos enviados pelo usuário e linkar com a ação adequada no robô; e
 
 ### Sprint 3
 
-:::info
-Em construção. Volte mais tarde =D
-:::
+Aprimoramento do sistema de chatbot. O que antes era baseado em regras simples
+e expressões regulares agora passa a usar LLM (local ou API externa). Para esta
+entrega, espera-se:
+
+1. Sistema de navegação e mapeamento ainda funcional;
+2. Interface de usuário (pode ser terminal ou já ter um frontend) por chatbot,
+   só que agora utilizando LLM e atendendo a mais do que só comandos simples. O
+   sistema deve ser capaz de ler arquivos PDF e usá-los para contextualizar a
+   resposta;
+3. Deve haver um nó responsável por realizar o log do sistema (grupo está livre
+   para definir o que ficará salvo no log operacional).
 
 ### Sprint 4
 

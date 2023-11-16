@@ -228,7 +228,7 @@ dentro da minha pasta `Documents`, então o comando ficou assim:
 
 ```
 mkdir -p ~/Documents/Maps 
-ros2 run nav2_map_saver map_saver_cli -f ~/Documents/Maps/my-map
+ros2 run nav2_map_server map_saver_cli -f ~/Documents/Maps/my-map
 ```
 
 Prontinho! Você agora deve ter um arquivo de imagem (`pgm`) e outro arquivo com
