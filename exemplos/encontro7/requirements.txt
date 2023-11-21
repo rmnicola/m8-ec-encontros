@@ -1,0 +1,7 @@
+langchain
+openai
+faiss-cpu
+tiktoken
+gpt4all
+sentence-transformers
+chromadb
