@@ -1,5 +1,5 @@
 ---
-title: Encontro 7
+title: Encontro 8
 sidebar_position: 1
 ---
 import Admonition from '@theme/Admonition';
@@ -7,9 +7,9 @@ import Admonition from '@theme/Admonition';
 # <img src={require('/img/instrucao.png').default} width='40vw'/> Material do encontro 7
 
 ## 1. Roteiro 
-1. Langchain, o retorno
-2. LCEL
-3. RAG
+1. Introdução às redes neurais
+2. Retropropagação
+3. Perceptrons
 
 ## 2. Slides 
 
@@ -21,15 +21,8 @@ import Admonition from '@theme/Admonition';
             width: '100%',
             height: '50vh',
         }}
-        src="https://slides.com/rodrigomangoninicola/m8-ec-encontros/embed#/encontro7"
+        src="https://slides.com/rodrigomangoninicola/m8-ec-encontros/embed#/encontro8"
         frameborder="0" 
         allowFullScreen>
     </iframe>
 </div>
-
-## 3. Exemplos
-[Exemplos
-LCEL](https://github.com/rmnicola/m8-ec-encontros/tree/main/exemplos/encontro7/chains)
-
-[Exemplos
-RAG](https://github.com/rmnicola/m8-ec-encontros/tree/main/exemplos/encontro7/rag)

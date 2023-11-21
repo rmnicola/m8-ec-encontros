@@ -201,6 +201,6 @@ especializados](https://blogs.infosys.com/emerging-technology-solutions/artifici
 que superam até mesmo o GPT4 para algumas tarefas. Até mesmo a OpenAI
 introduziu o conceito de [chats
 customizados](https://openai.com/blog/introducing-gpts) na sua última
-atualização. O fato é que LLMs conseguem produzir melhor resultados quando tem
+atualização. O fato é que LLMs conseguem produzir melhores resultados quando tem
 uma tarefa simples e muito bem definida, o que significa que para criar uma
 resposta a uma questão mais complexa faz total sentido o uso de encadeamentos.

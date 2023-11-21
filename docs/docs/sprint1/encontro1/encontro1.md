@@ -20,7 +20,7 @@ sidebar_position: 1
             width: '100%',
             height: '50vh',
         }}
-        src="https://slides.com/rodrigomangoninicola/m8-ec-encontro1/fullscreen"
+        src="https://slides.com/rodrigomangoninicola/m8-ec-encontros/embed#/encontro1"
         frameborder="0" 
         allowFullScreen>
     </iframe>
