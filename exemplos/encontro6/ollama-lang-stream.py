@@ -4,7 +4,6 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
 ollama = Ollama(
                 model="dolphin2.2-mistral",
-                verbose=True,
                 callback_manager=CallbackManager([StreamingStdOutCallbackHandler()])
                 )
 
