@@ -8,8 +8,9 @@ import Admonition from '@theme/Admonition';
 
 ## 1. Roteiro 
 1. Introdução às redes neurais
-2. Retropropagação
-3. Perceptrons
+2. Entendendo perceptrons
+3. Gradiente descendente
+4. Retropropagação
 
 ## 2. Slides 
 
