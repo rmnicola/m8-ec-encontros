@@ -7,7 +7,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import Chroma
 
 # load the document and split it into chunks
-loader = TextLoader("./data/items.txt")
+loader = TextLoader("../data/items.txt")
 documents = loader.load()
 
 # split it into chunks
