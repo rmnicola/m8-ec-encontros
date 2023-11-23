@@ -42,7 +42,7 @@ atividade.
    o sistema criado, comandos em blocos de código e uma expliação sucinta do
    que fazem;
 3. Ainda no README, deve haver um vídeo gravado demonstrando plenamente o
-   funcionamento do nó criado;
+   funcionamento do sistema criado;
 4. O prazo para a entrega desta atividade é até o dia 29/11/2023 às 23h59min.
 
 ## 4. Padrão de qualidade
@@ -59,5 +59,5 @@ no vídeo do projeto em funcionamento.
 2. Criar uma interface gráfica simples para o chatbot - até 2,0 pontos;
 3. Responder de forma concisa aos prompts do usuário - até 2,0 pontos;
 4. O sistema deve considerar como contexto o arquivo/documento/página fornecida
-   no enunciado da atividade - até 4,0 pontos.
+   no enunciado da atividade - até 3,0 pontos.
 
