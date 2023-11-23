@@ -1,6 +1,6 @@
 ---
 title: Atividade ponderada 6
-sidebar_position: 3
+sidebar_position: 4
 ---
 import Admonition from '@theme/Admonition';
 
