@@ -1,10 +1,10 @@
 ---
 title: Atividade ponderada 6
-sidebar_position: 3
+sidebar_position: 4
 ---
 import Admonition from '@theme/Admonition';
 
-# <img src={require('/img/ponderada.png').default} width='35vw'/> Construção de um chatbot com LLM
+# <img src={require('/img/ponderada.png').default} width='35vw'/> Construindo um perceptron com Python
 
 ## 1. Objetivo
 
