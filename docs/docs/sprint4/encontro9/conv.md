@@ -6,6 +6,18 @@ import Admonition from '@theme/Admonition';
 
 # <img src={require('/img/autoestudo.png').default} width='35vw'/> Redes neurais convolucionais
 
+:::caution Aviso
+
+O texto abaixo é basicamente um resumo traduzido (pelo GPT) do capítulo do
+livro `Neural Networks and Depp Learning`. Se for para escolher apenas um
+autoestudo para fazer (faça todos, o assunto é denso e vale a pena se expor a
+mais de uma abstração), escolha o do `StatQuest`; é de **LONGE** o mais
+acessível. Como tem vídeos longos e capítulos de livros, sugiro começar pelo
+vídeo curto e ir consumindo o conteúdo aos poucos (mesmo que acabe indo para a
+instrução sem ter visto/lido tudo)
+
+:::
+
 <Admonition 
     type="info" 
     icon=<img src={require('/img/autoestudo.png').default} width='20vw' />
@@ -60,16 +72,6 @@ import Admonition from '@theme/Admonition';
 176-202](https://static.latexstudio.net/article/2018/0912/neuralnetworksanddeeplearning.pdf)
 
 </Admonition>
-
-:::caution Aviso
-
-O texto abaixo é basicamente um resumo traduzido (pelo GPT) do capítulo do
-livro `Neural Networks and Depp Learning`. Se for para escolher apenas um
-autoestudo para fazer (faça todos, o assunto é denso e vale a pena se expor a
-mais de uma abstração), escolha o do `StatQuest`; é de **LONGE** o mais
-acessível.
-
-:::
 
 As Redes Neurais Convolucionais (CNNs, do inglês Convolutional Neural Networks)
 são uma forma especializada de rede neural projetada para tarefas de
