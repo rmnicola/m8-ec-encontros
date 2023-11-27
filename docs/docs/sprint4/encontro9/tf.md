@@ -4,9 +4,9 @@ sidebar_position: 3
 ---
 import Admonition from '@theme/Admonition';
 
-## 1. Introdução rápida ao Tensorflow
-
 # <img src={require('/img/autoestudo.png').default} width='35vw'/> Introdução ao Tensorflow
+
+## 1. Introdução rápida ao Tensorflow
 
 <Admonition 
     type="info" 
