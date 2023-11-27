@@ -50,9 +50,13 @@ entrega, espera-se:
 
 ### Sprint 4
 
-:::info
-Em construção. Volte mais tarde =D
-:::
+Interface de usuário do sistema. Obrigatoriamente deve ter interface
+text-to-speech e speech-to-text. Espera-se:
+
+1. Sistema de STT completamente integrado aos prompts do LLM.
+2. Sistema de TTS completamente integrado às saídas do LLM.
+3. Integração de qualquer outra interface proposta inicialmente pelo grupo.
+
 
 ### Sprint 5
 
