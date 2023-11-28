@@ -8,11 +8,10 @@ import Admonition from '@theme/Admonition';
 
 ## 1. Objetivo
 
+Treinar e utilizar uma rede neural convolucional para classificar corretamente
+o dataset MNIST.
 
-## 2. Enunciado
-
-
-## 3. Padrão de entrega
+## 2. Padrão de entrega
 
 Esses são os critérios mínimos para que eu considere a atividade como entregue.
 Fique atento, pois o não cumprimento de qualquer um desses critérios pode, no
@@ -28,5 +27,16 @@ atividade.
    funcionamento do nó criado;
 4. O prazo para a entrega desta atividade é até o dia 05/12/2023 às 23h59min.
 
-## 4. Padrão de qualidade
+## 3. Padrão de qualidade
 
+:::caution Aviso!
+
+Os itens descritos no padrão de qualidade devem estar claramente apresentados
+no vídeo do projeto em funcionamento.
+
+:::
+
+1. O sistema implementa uma arquitetura válida de rede neural convolucional. -
+   até 6,0 pontos;
+2. O sistema apresenta acurácia maior que 95% no dataset MNIST (conjunto de
+   treino) com apenas 3 épocas. - até 4,0 pontos.
