@@ -8,11 +8,23 @@ import Admonition from '@theme/Admonition';
 
 ## 1. Roteiro 
 
+1. Multi-layer perceptrons
+2. Apresentando o Keras
+3. Relembrando convoluções
+4. Redes neurais convolucionais
+
 ## 2. Slides 
 
-<Admonition 
-    type="info" 
-    icon=<img src={require('/gifs/loading.gif').default} width='20vw' />
-    title="Work in progress">
-
-</Admonition>
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://slides.com/rodrigomangoninicola/m8-ec-encontros/embed#/encontro9"
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
