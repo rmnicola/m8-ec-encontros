@@ -332,3 +332,70 @@ complexas.
 </div>
 
 </Admonition>
+
+Na sequência, chegamos a uma das inovações mais significativas recentes: os
+Transformers. Esta arquitetura, introduzida no artigo "Attention is All You
+Need" em 2017, reformulou o cenário de PLN ao demonstrar que é possível
+construir modelos altamente eficientes usando apenas o conceito de atenção,
+abandonando as redes LSTM e outros tipos de redes neurais recorrentes (RNNs)
+tradicionalmente usadas em tarefas seq2seq.
+
+### 5.1. O Abandono de RNNs/LSTMs
+
+Antes dos Transformers, as RNNs e suas variantes, como as LSTMs, eram a espinha
+dorsal para a maioria das tarefas de PLN, principalmente devido à sua
+habilidade de lidar com sequências de dados. No entanto, elas possuem
+limitações significativas, incluindo dificuldades com sequências longas e
+desafios no treinamento devido ao desvanecimento ou explosão do gradiente. Além
+disso, as RNNs processam dados sequencialmente, o que impede a paralelização,
+um fator chave para acelerar o treinamento de modelos.
+
+### 5.2. Introdução aos Transformers
+
+Os Transformers abordam essas limitações utilizando exclusivamente mecanismos
+de atenção, especificamente a atenção multi-cabeça, para processar dados. Ao
+contrário das RNNs/LSTMs, os Transformers processam todos os elementos da
+sequência de entrada simultaneamente. Essa capacidade de processamento paralelo
+permite um treinamento muito mais rápido e eficiente.
+
+### 5.3. Arquitetura dos Transformers
+
+A arquitetura dos Transformers é composta por um encoder e um decoder, ambos
+construídos com múltiplas camadas que utilizam atenção multi-cabeça e redes
+neurais feedforward.
+
+1. **Atenção Multi-Cabeça**: Essa abordagem permite que o modelo foque em
+   diferentes partes da sequência de entrada de várias maneiras ao mesmo tempo.
+   Isso enriquece a capacidade do modelo de entender e representar diferentes
+   aspectos contextuais e semânticos da sequência.
+
+2. **Encoder**: No encoder, as camadas de atenção multi-cabeça juntamente com
+   redes neurais feedforward processam a sequência de entrada, criando
+   representações ricas e complexas.
+
+3. **Decoder**: No decoder, a atenção multi-cabeça é usada não apenas para
+   focar na sequência de saída gerada até então, mas também para prestar
+   atenção à saída do encoder, facilitando a geração de uma sequência de saída
+   mais precisa e contextualizada.
+
+### 5.4. Vantagens dos Transformers
+
+1. **Paralelização**: Ao contrário das RNNs/LSTMs, os Transformers não exigem
+   que os dados sejam processados sequencialmente, o que permite uma
+   paralelização substancial e, consequentemente, treinamentos mais rápidos.
+
+2. **Escalabilidade**: Os Transformers escalam melhor com o aumento do tamanho
+   do conjunto de dados e da complexidade do modelo, o que é essencial para
+       lidar com grandes volumes de dados de PLN.
+
+3. **Eficiência em Sequências Longas**: Eles são mais eficientes no
+   processamento de sequências longas, evitando os problemas de memória de
+   longo prazo associados às RNNs/LSTMs.
+
+### 5.5. Impacto dos Transformers
+
+Os Transformers rapidamente se tornaram um padrão de ouro em PLN, impulsionando
+avanços significativos em diversas tarefas, como tradução automática, geração
+de texto, entendimento de linguagem natural e muito mais. Modelos como BERT,
+GPT e T5, todos baseados na arquitetura Transformer, demonstraram desempenho
+excepcional em uma ampla gama de tarefas de PLN.
