@@ -197,6 +197,42 @@ entre as palavras.
 
 </Admonition>
 
+Dando sequência aos tópicos abordados anteriormente sobre a semelhança de
+cossenos com vetores one-hot e o uso de redes neurais para criar embeddings de
+palavras, vamos explorar agora uma aplicação avançada dessas tecnologias no
+campo do processamento de linguagem natural: as tarefas de sequência para
+sequência (seq2seq) com arquiteturas de encoder-decoder, utilizando camadas de
+embeddings e redes LSTM (Long Short-Term Memory).
+
+### 3.1. Tarefas Seq2Seq
+
+As tarefas seq2seq envolvem a conversão de uma sequência de entrada em uma
+sequência de saída, onde as duas sequências podem ter comprimentos diferentes.
+Exemplos comuns incluem tradução automática, resumo de texto e geração de
+legendas para imagens. 
+
+### 3.2. Arquitetura Encoder-Decoder
+
+A arquitetura encoder-decoder é um framework poderoso para lidar com tarefas
+seq2seq. O encoder processa a sequência de entrada e compacta a informação em
+um vetor de contexto, uma representação densa de toda a sequência de entrada. O
+decoder, então, usa este vetor para gerar a sequência de saída passo a passo.
+
+### 3.3. Camadas de Embeddings
+
+As camadas de embeddings são utilizadas tanto no encoder quanto no decoder para
+converter palavras (ou tokens) em vetores densos. Esses embeddings são
+geralmente aprendidos durante o treinamento do modelo e ajudam a capturar os
+significados semânticos das palavras, como discutido no artigo anterior.
+
+### 3.4. Redes LSTM
+
+LSTMs são uma forma especializada de redes neurais recorrentes (RNNs) que são
+capazes de aprender dependências de longo prazo. Elas são ideais para tarefas
+seq2seq devido à sua habilidade de manter informações relevantes ao longo de
+sequências longas, evitando o problema de desvanecimento do gradiente, comum em
+RNNs tradicionais.
+
 ## 4. Atenção
 
 <Admonition 
