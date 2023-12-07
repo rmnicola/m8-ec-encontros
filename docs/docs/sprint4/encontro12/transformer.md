@@ -127,6 +127,53 @@ entre as palavras.
 
 </Admonition>
 
+Após entendermos como a semelhança de cossenos é aplicada usando vetores
+one-hot para representar palavras, vamos avançar para um conceito mais
+sofisticado e poderoso em processamento de linguagem natural: o uso de redes
+neurais para criar vetores de incorporação, conhecidos como embeddings. Esses
+embeddings capturam muito mais do contexto e do significado semântico das
+palavras do que os vetores one-hot.
+
+### 2.1. Introdução aos Embeddings de Palavras
+
+Embeddings de palavras são representações vetoriais densas onde palavras com
+significados ou contextos semelhantes têm representações semelhantes. Diferente
+dos vetores one-hot, que são esparsos e de grande dimensão, embeddings são
+compactos e contínuos, permitindo que nuances e relações semânticas sejam
+capturadas de forma mais eficiente.
+
+### 2.2. O Papel das Redes Neurais
+
+Redes neurais, especialmente as redes neurais profundas, são cruciais na
+geração desses embeddings. Um modelo popular para isso é o Word2Vec, que
+utiliza uma rede neural simples para aprender representações vetoriais de
+palavras a partir de grandes conjuntos de dados textuais. O modelo pode ser
+treinado de duas maneiras: Skip-gram e Continuous Bag of Words (CBOW). Ambos os
+métodos visam prever palavras com base em seu contexto (ou vice-versa), e
+através desse processo, o modelo aprende embeddings que refletem os padrões
+semânticos e sintáticos das palavras.
+
+### 2.3. Aplicação ao Nosso Exemplo
+
+Retomando o nosso exemplo anterior com o vocabulário ["gato", "cachorro",
+"ave"], ao invés de usar vetores one-hot, empregamos uma rede neural para
+aprender embeddings para estas palavras. Suponha que após o treinamento,
+obtemos os seguintes embeddings:
+
+- "gato": [0.8, -0.1, 0.3]
+- "cachorro": [0.7, -0.2, 0.4]
+- "ave": [-0.1, 0.9, -0.5]
+
+Note que estes vetores são mais densos e contêm valores em todas as dimensões.
+
+### 2.4. Comparando com a Semelhança de Cossenos
+
+Agora, se calculássemos a semelhança de cossenos entre "gato" e "cachorro"
+usando esses embeddings, o resultado seria significativamente diferente do
+exemplo com vetores one-hot. Aqui, os vetores não são ortogonais e, portanto, a
+semelhança de cossenos não seria 0, indicando uma maior semelhança semântica
+entre as palavras.
+
 ## 3. Seq2seq e Encoder/Decoder
 
 <Admonition 
