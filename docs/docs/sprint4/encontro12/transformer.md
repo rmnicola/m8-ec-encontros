@@ -256,6 +256,60 @@ RNNs tradicionais.
 
 </Admonition>
 
+Continuando nossa série de artigos sobre avanços no processamento de linguagem
+natural, vamos agora focar em um conceito revolucionário que tem melhorado
+significativamente o desempenho das arquiteturas de encoder-decoder: a mecânica
+de atenção. Este conceito é particularmente importante em tarefas seq2seq, como
+tradução automática, onde a capacidade de focar em partes específicas da
+entrada durante a decodificação é crucial.
+
+### 4.1. O Problema do Encoder-Decoder Tradicional
+
+Nas arquiteturas encoder-decoder convencionais, todo o conteúdo da sequência de
+entrada é comprimido em um único vetor de contexto fixo. Esse vetor é então
+usado pelo decoder para gerar a sequência de saída. Um grande desafio aqui é
+que o vetor de contexto pode se tornar um gargalo, especialmente para
+sequências longas, onde é difícil para o modelo manter todas as informações
+relevantes apenas nesse vetor.
+
+### 4.2. Introdução à Mecânica de Atenção
+
+A mecânica de atenção foi introduzida como uma solução para o problema do vetor
+de contexto fixo. Em vez de forçar o modelo a depender de um único vetor de
+contexto, a atenção permite que o decoder foque em diferentes partes da
+sequência de entrada em cada etapa da decodificação. Isso é semelhante ao modo
+como os humanos prestam atenção a diferentes partes de uma frase ou imagem
+quando estão tentando entender ou responder a algo.
+
+### 4.3. Como Funciona a Atenção
+
+1. **Pontuação de Atenção**: Primeiramente, o modelo calcula um conjunto de
+   pontuações de atenção. Estas pontuações determinam o quanto o modelo deve se
+   focar em cada parte da entrada ao gerar cada palavra da saída.
+
+2. **Pesos de Atenção**: As pontuações são então normalizadas para formar uma
+   distribuição de probabilidade (pesos de atenção). Esses pesos decidem a
+   importância relativa de cada palavra na entrada para a geração da próxima
+   palavra na saída.
+
+3. **Vetor de Contexto Dinâmico**: Usando esses pesos, um vetor de contexto
+   ponderado é gerado para cada etapa da decodificação. Esse vetor é uma
+   combinação das representações de entrada, ponderadas pela sua relevância
+   atual.
+
+4. **Decodificação com Atenção**: O decoder, em cada etapa, utiliza este vetor
+   de contexto dinâmico, junto com o estado oculto anterior, para gerar a
+   próxima palavra da sequência de saída.
+
+### 4.4. Vantagens e Aplicações
+
+A introdução da atenção melhora significativamente a capacidade dos modelos
+seq2seq, especialmente em tarefas como tradução automática, onde a
+correspondência entre as partes da entrada e da saída é crítica. Com atenção,
+os modelos podem se concentrar em partes relevantes da entrada para cada
+palavra da saída, o que é particularmente útil para lidar com frases longas e
+complexas.
+
 ## 5. Transformers
 
 <Admonition 
