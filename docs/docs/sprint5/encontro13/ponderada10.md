@@ -19,6 +19,7 @@ utilizando os recursos de fabricação digital que temos disponíveis.
 
 Envie o texto ou um link para um documento contendo o texto no card da Adalove.
 
+Prazo de entrega: até 19/12/2023 às 23:59
 
 ## 4. Padrão de qualidade
 

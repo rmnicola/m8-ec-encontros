@@ -35,6 +35,8 @@ colab](https://colab.research.google.com/github/aamini/introtodeeplearning/blob/
 O exercício será desenvolvido em sala de aula. Para a entrega, envie o link do
 Colab preenchido.
 
+Prazo de entrega: até 17/12/2023 às 23h59
+
 ## 4. Padrão de qualidade
 
 Completou as células com `TODO` no notebook fornecido? Criou uma música nova a
