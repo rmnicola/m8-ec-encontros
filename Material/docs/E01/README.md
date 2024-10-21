@@ -1,6 +1,6 @@
 ---
 title: E1 - Design Patterns
-sidebar_position: 5
+sidebar_position: 3
 slug: /e1
 ---
 
