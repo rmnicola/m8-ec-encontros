@@ -8,7 +8,7 @@ import rehypeKatex from 'rehype-katex';
 const config: Config = {
   title: 'M8 (EC)',
   tagline: 'Robótica de serviço',
-  favicon: 'icons/hh_icon.png',
+  favicon: 'icons/jjk_logo.png',
 
   url: 'https://rmnicola.github.io',
   baseUrl: '/m8-ec-encontros',
@@ -45,7 +45,7 @@ const config: Config = {
       title: 'Módulo 8 (EC)',
       logo: {
         alt: 'Inteli Logo',
-        src: 'icons/jjk_icon.png',
+        src: 'icons/jjk_logo.png',
       },
       items: [
         {
