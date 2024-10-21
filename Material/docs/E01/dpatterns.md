@@ -2,7 +2,7 @@
 title: Design Patterns
 sidebar_position: 1
 sidebar_class_name: autoestudo
-slug: dpatterns
+slug: /dpatterns
 ---
 
 # Design Patterns
