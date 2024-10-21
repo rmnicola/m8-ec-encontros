@@ -9,8 +9,8 @@ slug: /e2
 **Encontro em 29/10/2024**
 
 <img 
-  src="img/potential.png"
-  alt="120% Potential"
+  src="img/exception.jpg"
+  alt="We are the exception!"
   style={{ 
     display: 'block',
     marginLeft: 'auto',
