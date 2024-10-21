@@ -1,38 +1,25 @@
 ---
-title: E4 - Memória
-sidebar_position: 8
+title: E4 - Projetos em ROS
+sidebar_position: 6
 slug: /e4
 ---
 
-# Entendendo registradores
+# Aplicação de design patterns em ROS
 
-**Encontro em 15/08/2024**
+**Encontro em 05/11/2024**
 
 <img 
-  src="https://pm1.aminoapps.com/6685/e2789fbb49ca84f73ffda4e5578eb04a99e6d834_hq.jpg"
-  alt="Puck!"
+  src="img/applause.webp"
+  alt="The act of applause."
   style={{ 
     display: 'block',
     marginLeft: 'auto',
-    maxHeight: '30vh',
+    maxHeight: '50vh',
     marginRight: 'auto'
   }} 
 />
 <br/>
 
-## 1. Preparação pré-encontro
+## 1. Objetivos
 
-TODO
-
-## 2. Objetivos de aprendizagem
-
-TODO
-
-## 3. Roteiro do encontro
-
-TODO
-
-## 4. Slides
-
-TODO
-
+## 2. Slides
