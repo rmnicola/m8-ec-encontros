@@ -24,16 +24,30 @@ slug: /
 
 O que é um robô? 
 
-Pode ser que você já se fez essa pergunta enquanto acompanhava
-alguma evolução do campo, como os recentes robôs da Tesla ou mesmo robôs já
-tradicionais, como o ASIMO. 
+Essa é uma pergunta que, até hoje, após mais de 10 anos trabalhando com robôs,
+de vez em quando se prende em minha consciência. Não é sempre que ela se
+apresenta, mas em situações bastante particulares; como quando vejo
+apresentações de bilionários excêntricos reproduzindo cenas de obras
+distópicas em ambientes manipulados ou quando me sento em frente a um robô
+humanoide mais velho que a maioria de meus alunos, observando-o pular, dançar e
+interagir com o público. Ainda não tenho uma resposta definitiva para esta
+dúvida, mas posso apresentar alguns pensamentos e fatos que vão servir para
+equalizar nossas expectativas quando utilizarmos o termo daqui para a frente.
 
-O termo robô surgiu em uma obra de ficção científica escrita pelo autor tcheco
-*Karel Capek* em 1920. O termo é derivado da palavra *robota*, que em tcheco
-significa trabalho forçado. Em sua obra, *Rossum's Universal Robots*, os
-robôs são seres artificiais que servem aos humanos. Assim como em muitas outras
-obras - que admitidamente ou não foram influenciadas pela obra original, do
-tcheco - o resultado dessa exploração foi uma revolução das máquinas.
+O termo robô data do século XX, mais especificamente de uma obra de 1920,
+*Rossum's Universal Robots*. Nesta obra, o autor tcheco *Karel Capek* apresenta
+uma sociedade que emprega o uso de seres artificiais cuja missão é única e
+exclusivamente servir aos humanos. A história apresenta um dilema filosófico
+que passou a ser comum à temática de robôs: poderiam criaturas criadas
+artificialmente ter direitos similares aos dos seres humanos? Essa indagação é
+particularmente engajante, pois provoca a reflexão do que exatamente tornaria
+os seres humanos diferentes de uma máquina - dotada da capacidade de pensar e
+sentir - perante a moral que permeia nossa sociedade. Em sua busca por um termo
+que sintetiza as máquinas apresentadas em sua obra, *Capek* pegou emprestado de
+sua língua nativa o termo *robota*, que significa *trabalho forçado*. Em *RUR*,
+assim como em muitas das obras de ficção ocidentais que viriam depois, a
+relação de opressão entre humanos e robôs termina em uma revolução das
+máquinas.
 
 <img 
   src="https://cdn.sanity.io/images/7p2whiua/production/c07a650456a5621dc25aade40d14c3897babcfee-2048x1536.jpg?w=900&auto=format"
@@ -49,27 +63,23 @@ tcheco - o resultado dessa exploração foi uma revolução das máquinas.
 <p><center>Fig. 1 - O ASIMO é um robô desenvolvido pela Honda. Embora ele tenha
 sido atualizado no decorrer dos anos, o seu surgimento foi em 2000. O nome é
 uma romanização de *ashi mo* - cujo significado alude ao fato de que ele possui
-pernas -; e ele continua a ser exposto até hoje no museu do futuro, em
+pernas - e ele continua a ser exposto até hoje no museu do futuro, em
 Tóquio.</center></p>
 
-Embora o imaginário coletivo seja fortemente influenciadas por obras como as de
-Capek ou mesmo Isaac Asimov, elas apontam para uma instância dos robôs que
-ainda está longe da nossa realidade; os robôs capazes do que chamamos de
-inteligência artificial generalizada.
+Obras como a de *Capek* e futuramente as de *Isaac Asimov* alimentaram o
+imaginário coletivo e condicionaram-nos a pensar em robôs como figuras
+humanoides, com características antropomórficas e capacidades similares, se não
+superiores, às de um ser humano. Existe, no entanto, um abismo de distância
+entre os primeiros robôs dos quais temos notícias e até mesmo de robôs
+humanoides clássicos como o *ASIMO*, da *Honda*, para os robôs apresentados
+nessas obras de ficção científica. Não devemos, portanto, mirá-las como pauta
+para nossas discuções sobre o que são robôs e como categorizá-los.
 
-Segue que, se os robôs de obras como *Eu, robô* ou *Exterminador do Futuro*
-apresentam uma interpretação do que é um robô completamente inequívoca, ela
-também não é definitiva. Se um robô precisar de uma capacidade de abstração de
-informações similar à de um ser humano, então estaríamos equivocados em chamar
-os robôs que hoje empregamos em indústrias, em campo, em restaurantes e até
-mesmo em nossas casas.
-
-Vamos apelar, então, para o outro extremo do espectro. No século XVIII, o
-inventor francês *Jacques de Vaucanson* produziu uma série de autômatos. Entre
-eles, um pato mecânico capaz de andar, ingerir grãos, processá-los e
-defecá-los. A invenção de Vaucanson flerta com a definição de robôs, pendendo
-para a definição deste ou de um autômato dependendo do ponto de vista de quem
-o avalia.
+Vamos voltar um pouco no tempo. No século XVIII, o inventor francês *Jacques de
+Vaucanson* produziu uma série de autômatos. Entre eles, um pato mecânico capaz
+de andar, ingerir grãos, processá-los e defecá-los. A invenção de Vaucanson
+flerta com a definição de robôs, pendendo para a definição deste ou de um
+autômato dependendo do ponto de vista de quem o avalia.
 
 <img 
   src="https://assets-us-01.kc-usercontent.com/9dd25524-761a-000d-d79f-86a5086d4774/1376dcd8-6266-46b7-b5ad-7a762082833a/DEVaucanson5.jpg?w=634&h=600&auto=format&q=75&fit=crop"
@@ -87,12 +97,46 @@ movimentos de suas patas com um sistema similar ao de um relógio mecânico. Era
 capaz, também, de ingerir grãos, moê-los em uma série de engrenagens e
 expelí-los após a "digestão".</center></p>
 
-Se um robô pode ser uma máquina antropomórfica capaz de exterminar a raça
-humana, apresentando um nível de inteligência capaz de, na mais otimista das
-estimativas, rivaliza com os maiores gênios da história humana e, ao mesmo
-tempo, também pode ser um pato mecânico que anda, come e defeca sem apresentar
-qualquer capacidade cognitiva, então a única conclusão possível é de que a
-definição de robô deve ser bastante genérica.
+Sob um ponto de vista utilitarista, qualquer pessoa estaria perdoada de julgar
+como frívolo o esforço em automatizar um pato, fazendo-o defecar grãos por ele
+mesmo processados. Há, no entanto, uma intangibilidade com relação a utilidade
+das invenções humanas. O pato de Vaucanson impressionou o então jovem *Charles
+Babbage* e o influenciou na criação de uma máquina que mudaria o rumo da
+sociedade e elevaria ao patamar de primeira programadora da história uma de
+suas colegas e consultoras, chamada *Ada Lovelace*, mas esse é um assunto para
+um outro módulo.
+
+Foi apenas depois do desenrolar das máquinas de *Babbage* e todos aqueles que
+seguiram em seu rastro que houve um novo salto no campo da robótica, dessa vez
+criando aquele que pode ser chamado sem erros de o primeiro robô industrial.
+Com uma patente depositada pelo inventor *George C. Devol* e aceita no ano de
+1954, o *Unimation* era um manipulador movido por trilhos capaz de se
+movimentar com três graus de liberdade no total, utilizando uma garra
+motorizada para manipular objetos em uma linha de montagem.
+
+<img 
+  src="https://www.thehenryford.org/linkedpub-image/qY8EE1_447shRg1F7LyjmbuscyLUg_WU7vXb3cTQvhcTj2k8m7PQdRYBOY4iQFWapWU2OGZlQIZfowKuCYrNMA"
+  alt="Unimation" 
+  style={{ 
+    display: 'block',
+    marginLeft: 'auto',
+    maxHeight: '30vh',
+    marginRight: 'auto'
+  }} 
+/>
+<br/>
+<p><center>Fig 3. - O Unimation foi o primeiro robô instalado em uma linha de
+montagem, no início dos anos 60.</center></p>
+
+Robôs como o *Unimation* só se tornaram possível com o advento dos computadores
+eletrônicos. Com eles, foi possível criar máquinas que - mais do que só se
+movimentar de forma controlada - conseguiam de certa forma perceber o mundo ao
+seu redor e - mesmo que de modo rudimentar - eram capazes de tomar decisões com
+base na informação capturada.
+
+Uma definição de robótica pode ser, portanto, traçada entre os pontos
+históricos definidos pelo pato de *Vaucanson* e o *Unimation*, de *Devol*. Para
+todos os efeitos, utilizaremos a seguinte definição para robôs:
 
 > Um robô é uma máquina orientada a objetivos capaz de detectar, planejar e
 > agir.
@@ -101,24 +145,25 @@ definição de robô deve ser bastante genérica.
 
 A definição acima, encontrada no livro **Robotics, vision and control**, do
 autor *Peter Corke*, pode não ser a definição que encerra toda e qualquer
-discussão a respeito de como definir um robô. Não obstante, ela é um tanto
-oportuna para que possamos continuar estudando os mecanismos que fazem um robô
-funcionar. Sendo assim, vamos adotá-la neste material.
+discussão a respeito de como definir um robô. Mesmo assim, ela será bastante
+útil para que possamos continuar estudando os mecanismos que fazem um robô
+funcionar.
 
-**Taxonomias da robótica**
+## 1. Taxonomias da robótica
 
-Em nossa ânsia por descobrir as leis que regem o universo que nos cerca, nós,
-humanos, nos esforçamos para categorizar ao máximo o conhecimento adquirido em
-nossa jornada. Esse esforço também pode ser visto na robótica, em que temos
-duas taxonomias distintas para classificar e agrupar os mecanismos que podem
-ser chamados de robôs. São elas a **taxonomia por tipo de movimentação** e a
-**taxonomia por função**.
+A categorização é uma das ferramentas mais utilizadas em nossa busca por
+desvendar as leis que regem o universo que nos cerca. Talvez essa seja a
+justificativa mais plausível para a nossa afinidade por taxonomias. Essa
+afinidade afeta, também, o mundo da robótica. Existem duas diferentes
+taxonomias para classificar e agrupar os mecanismos que podem ser chamados de
+robôs; são elas a **taxonomia por tipo de movimentação** e a **taxonomia por
+função**.
 
-A taxonomia por tipo de movimentação é um tanto simples; ou um robô é *móvel*
+A taxonomia por tipo de movimentação é um tanto simples: ou um robô é *móvel*
 ou não é. Sendo assim, ela é particularmente útil para distinguir o tipo de
-robôs cujo estudo depende fortemente do estudo da uma cadeia cinemática fechada
+robôs cujo estudo depende fortemente do estudo de uma cadeia cinemática fechada
 daqueles em que é particularmente mais interessante entender a dinâmica que
-rege sua locomoção.
+rege sua locomoção e o desempenho dela em diversos tipos de terrenos.
 
 A taxonomia por função apresenta um esforço mais completo de classificação das
 diferentes máquinas robóticas que atuam em nossa sociedade. Nela, temos as
@@ -134,7 +179,7 @@ hoje ocupam uma parcela significativa das linhas de montagem industriais.
 Tratam-se de robôs feitos para ter pouca ou nenhuma interação com seres
 humanos, mantendo-se fixos e com acesso a mecanismos de alimentação de insumos
 como esteiras ou dispensers. A disposição de sua cadeia cinemática é feita para
-maximizar o throughput em uma linha de montagem com movimentos de alta
+maximizar a produtividade em uma linha de montagem, com movimentos de alta
 velocidade e baixo consumo energético.
 
 <img 
@@ -148,7 +193,7 @@ velocidade e baixo consumo energético.
   }} 
 />
 <br/>
-<p><center>Fig. 3 - O projeto SIVOR, desenvolvido no CCM - ITA, apresenta um
+<p><center>Fig. 4 - O projeto SIVOR, desenvolvido no CCM - ITA, apresenta um
 exemplo de uso de robôs de manufatura que foge um pouco do convencional. Nesse
 projeto, um cockpit foi acoplado no final da cadeia de um robô KUKA KR1000 e,
 contando com filtros que traduzem a dinâmica de uma aeronáve para o volume de
@@ -174,7 +219,7 @@ autônoma na superfície de Marte.
   }} 
 />
 <br/>
-<p><center>Fig. 4 - Os destroços do navio Titanic encontram-se em uma
+<p><center>Fig. 5 - Os destroços do navio Titanic encontram-se em uma
 profundidade de aproximadamente 3800 metros. Nesta profundidade, uma embarcação
 feita para carregar seres humanos teria bastante dificuldade de resistir à
 pressão exercida pelo volume de água. Uma solução encontrada para inspecionar
@@ -206,6 +251,23 @@ desse tipo de solução robótica:
 2. Interação com seres humanos utilizando interfaces simples (e.g. uma
    interface gráfica) e complexas (e.g. linguagem natural).
 
+<img 
+  src="https://provenrobotics.ai/wp-content/uploads/2023/09/2.webp"
+  alt="BellaBot" 
+  style={{ 
+    display: 'block',
+    marginLeft: 'auto',
+    maxHeight: '30vh',
+    marginRight: 'auto'
+  }} 
+/>
+<br/>
+<p><center>Fig. 6 - O BellaBot é um robô de serviço criado para a industria
+hospitaleira. Ele é bastante empregado como um robô garçom em estabelecimentos
+como restaurantes e cafés. Além de sensores que o permitem mapear um ambiente e
+navegar nele, detectando obstáculos em tempo real, o BellaBot apresenta uma
+preocupação com a estética e a interface com o usuário.</center></p>
+
 Antes de seguirmos em frente, vou aproveitar que tenho sua atenção para fazer
 um **anúncio** de **extrema importância**. Se liga, que logo abaixo vem o
 admonition:
@@ -231,9 +293,7 @@ Entendeu? Ainda não? Pera aí que vou desenhar:
 
 Beleza, agora podemos seguir em frente.
 
-## 1. Descrição do módulo e assuntos abordados
-
-### 1.1. Ementa do módulo
+## 2. Ementa do módulo
 
 :::warning
 
