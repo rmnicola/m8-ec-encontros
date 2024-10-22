@@ -18,11 +18,197 @@ slug: /
 />
 <br/>
 
-**TODO - Descrição do módulo**
+> I can't define a robot, but I know one when I see one.
+>
+> *Joseph F. Engelberger*
 
-Antes de seguirmos em frente com o conteúdo principal dessa seção, vou
-aproveitar que tenho sua atenção para fazer um **anúncio** de **extrema
-importância**. Se liga, que logo abaixo vem o admonition:
+O que é um robô? 
+
+Pode ser que você já se fez essa pergunta enquanto acompanhava
+alguma evolução do campo, como os recentes robôs da Tesla ou mesmo robôs já
+tradicionais, como o ASIMO. 
+
+O termo robô surgiu em uma obra de ficção científica escrita pelo autor tcheco
+*Karel Capek* em 1920. O termo é derivado da palavra *robota*, que em tcheco
+significa trabalho forçado. Em sua obra, *Rossum's Universal Robots*, os
+robôs são seres artificiais que servem aos humanos. Assim como em muitas outras
+obras - que admitidamente ou não foram influenciadas pela obra original, do
+tcheco - o resultado dessa exploração foi uma revolução das máquinas.
+
+<img 
+  src="https://cdn.sanity.io/images/7p2whiua/production/c07a650456a5621dc25aade40d14c3897babcfee-2048x1536.jpg?w=900&auto=format"
+  alt="Robô ASIMO" 
+  style={{ 
+    display: 'block',
+    marginLeft: 'auto',
+    maxHeight: '30vh',
+    marginRight: 'auto'
+  }} 
+/>
+<br/>
+<p><center>Fig. 1 - O ASIMO é um robô desenvolvido pela Honda. Embora ele tenha
+sido atualizado no decorrer dos anos, o seu surgimento foi em 2000. O nome é
+uma romanização de *ashi mo* - cujo significado alude ao fato de que ele possui
+pernas -; e ele continua a ser exposto até hoje no museu do futuro, em
+Tóquio.</center></p>
+
+Embora o imaginário coletivo seja fortemente influenciadas por obras como as de
+Capek ou mesmo Isaac Asimov, elas apontam para uma instância dos robôs que
+ainda está longe da nossa realidade; os robôs capazes do que chamamos de
+inteligência artificial generalizada.
+
+Segue que, se os robôs de obras como *Eu, robô* ou *Exterminador do Futuro*
+apresentam uma interpretação do que é um robô completamente inequívoca, ela
+também não é definitiva. Se um robô precisar de uma capacidade de abstração de
+informações similar à de um ser humano, então estaríamos equivocados em chamar
+os robôs que hoje empregamos em indústrias, em campo, em restaurantes e até
+mesmo em nossas casas.
+
+Vamos apelar, então, para o outro extremo do espectro. No século XVIII, o
+inventor francês *Jacques de Vaucanson* produziu uma série de autômatos. Entre
+eles, um pato mecânico capaz de andar, ingerir grãos, processá-los e
+defecá-los. A invenção de Vaucanson flerta com a definição de robôs, pendendo
+para a definição deste ou de um autômato dependendo do ponto de vista de quem
+o avalia.
+
+<img 
+  src="https://assets-us-01.kc-usercontent.com/9dd25524-761a-000d-d79f-86a5086d4774/1376dcd8-6266-46b7-b5ad-7a762082833a/DEVaucanson5.jpg?w=634&h=600&auto=format&q=75&fit=crop"
+  alt="Pato de Vaucanson" 
+  style={{ 
+    display: 'block',
+    marginLeft: 'auto',
+    maxHeight: '30vh',
+    marginRight: 'auto'
+  }} 
+/>
+<br/>
+<p><center>Fig. 2 - O pato de Vaucanson era capaz de andar, sincronizando os
+movimentos de suas patas com um sistema similar ao de um relógio mecânico. Era
+capaz, também, de ingerir grãos, moê-los em uma série de engrenagens e
+expelí-los após a "digestão".</center></p>
+
+Se um robô pode ser uma máquina antropomórfica capaz de exterminar a raça
+humana, apresentando um nível de inteligência capaz de, na mais otimista das
+estimativas, rivaliza com os maiores gênios da história humana e, ao mesmo
+tempo, também pode ser um pato mecânico que anda, come e defeca sem apresentar
+qualquer capacidade cognitiva, então a única conclusão possível é de que a
+definição de robô deve ser bastante genérica.
+
+> Um robô é uma máquina orientada a objetivos capaz de detectar, planejar e
+> agir.
+>
+> *Peter Corke*
+
+A definição acima, encontrada no livro **Robotics, vision and control**, do
+autor *Peter Corke*, pode não ser a definição que encerra toda e qualquer
+discussão a respeito de como definir um robô. Não obstante, ela é um tanto
+oportuna para que possamos continuar estudando os mecanismos que fazem um robô
+funcionar. Sendo assim, vamos adotá-la neste material.
+
+**Taxonomias da robótica**
+
+Em nossa ânsia por descobrir as leis que regem o universo que nos cerca, nós,
+humanos, nos esforçamos para categorizar ao máximo o conhecimento adquirido em
+nossa jornada. Esse esforço também pode ser visto na robótica, em que temos
+duas taxonomias distintas para classificar e agrupar os mecanismos que podem
+ser chamados de robôs. São elas a **taxonomia por tipo de movimentação** e a
+**taxonomia por função**.
+
+A taxonomia por tipo de movimentação é um tanto simples; ou um robô é *móvel*
+ou não é. Sendo assim, ela é particularmente útil para distinguir o tipo de
+robôs cujo estudo depende fortemente do estudo da uma cadeia cinemática fechada
+daqueles em que é particularmente mais interessante entender a dinâmica que
+rege sua locomoção.
+
+A taxonomia por função apresenta um esforço mais completo de classificação das
+diferentes máquinas robóticas que atuam em nossa sociedade. Nela, temos as
+seguintes divisões:
+
+* Robôs de manufatura;
+* Robôs de campo;
+* Robôs teleoperados; e
+* Robôs de serviço.
+
+Os **robôs de manufatura** são melhor representados pelos braços mecânicos que
+hoje ocupam uma parcela significativa das linhas de montagem industriais.
+Tratam-se de robôs feitos para ter pouca ou nenhuma interação com seres
+humanos, mantendo-se fixos e com acesso a mecanismos de alimentação de insumos
+como esteiras ou dispensers. A disposição de sua cadeia cinemática é feita para
+maximizar o throughput em uma linha de montagem com movimentos de alta
+velocidade e baixo consumo energético.
+
+<img 
+  src="https://revistapotencia.com.br/wp-content/uploads/2022/11/KUKA.png"
+  alt="SIVOR" 
+  style={{ 
+    display: 'block',
+    marginLeft: 'auto',
+    maxHeight: '40vh',
+    marginRight: 'auto'
+  }} 
+/>
+<br/>
+<p><center>Fig. 3 - O projeto SIVOR, desenvolvido no CCM - ITA, apresenta um
+exemplo de uso de robôs de manufatura que foge um pouco do convencional. Nesse
+projeto, um cockpit foi acoplado no final da cadeia de um robô KUKA KR1000 e,
+contando com filtros que traduzem a dinâmica de uma aeronáve para o volume de
+trabalho de uma plataforma robótica, pode ser utilizado para treinamento de
+pilotos em ambiente de simulação.</center></p>
+
+Os **robôs teleoperados** apresentam um desafio de transmissão de dados com a
+menor latência possível e de locomoção por terrenos variados. Este tipo de robô
+pode ser completamente teleoperado ou apenas receber objetivos de um operador a
+distância. Um exemplo de robô completamente teleoperado são os ROV's utilizados
+para inspecionar os destroços do Titanic. Por outro lado, o Mars rover, da
+NASA, recebe apenas objetivos de seu operador na Terra e navega de forma
+autônoma na superfície de Marte.
+
+<img 
+  src="https://oceanconservancy.org/wp-content/uploads/2023/01/JasonJr_TitanicROV_WoodsHole-1024x683.webp"
+  alt="Titanic ROV" 
+  style={{ 
+    display: 'block',
+    marginLeft: 'auto',
+    maxHeight: '30vh',
+    marginRight: 'auto'
+  }} 
+/>
+<br/>
+<p><center>Fig. 4 - Os destroços do navio Titanic encontram-se em uma
+profundidade de aproximadamente 3800 metros. Nesta profundidade, uma embarcação
+feita para carregar seres humanos teria bastante dificuldade de resistir à
+pressão exercida pelo volume de água. Uma solução encontrada para inspecionar
+os destroços do famoso naufrago foi o uso de robôs teleoperados.</center></p>
+
+Os *robôs de campo* e os *robôs de serviço* apresentam como o seu maior desafio
+o *mapeamento e navegação* em ambientes complexos e sem estabilidade temporal.
+Sendo assim, tratam-se de robôs equipados com dois tipos de sensores:
+
+* Os sensores *proprioceptivos* são aqueles que medem o estado do robô - a
+  movimentação dos seus motores, a sua pose ou localização - em todos os
+  instantes. Esses sensores são fundamentais para a implementação de
+  estratégias de controle.
+* Os sensores *exteroceptivos* servem para detectar o ambiente ao redor do
+  robô. Entre eles, os sensores típicos envolvem LIDAR, câmeras, sensores
+  infravermelho ou ultrassônicos. Sem esses sensores, seria impossível coletar
+  informações necessárias para navegar em ambientes complexos.
+
+Além disso, no caso específico dos *robôs de serviço* é de fudamental
+importância estudar cuidadosamente a maneira como esses dispositivos interagem
+com os seres humanos, tendo em vista que sua razão de existir envolve
+satisfazer uma necessidade ou vontade de uma pessoa.
+
+Neste módulo, nosso foco total será na *robótica de serviço*. Isso significa
+que vamos estudar os dois principais desafios que envolvem o desenvolvimento
+desse tipo de solução robótica:
+
+1. Mapeamento de navegação autônoma; e
+2. Interação com seres humanos utilizando interfaces simples (e.g. uma
+   interface gráfica) e complexas (e.g. linguagem natural).
+
+Antes de seguirmos em frente, vou aproveitar que tenho sua atenção para fazer
+um **anúncio** de **extrema importância**. Se liga, que logo abaixo vem o
+admonition:
 
 :::danger
 
