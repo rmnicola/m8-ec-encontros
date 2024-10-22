@@ -9,7 +9,7 @@ slug: /e3
 **Encontro em 31/10/2024**
 
 <img 
-  src="img/defile.png"
+  src="img/defile.jpg"
   alt="Memory of the lost."
   style={{ 
     display: 'block',
