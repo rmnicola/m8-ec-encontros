@@ -4,13 +4,15 @@ sidebar_position: 2
 sidebar_class_name: opcional
 slug: /dpatterns-python
 ---
+import SkillIssue from '@site/static/img/skill_issue.jpg';
+import Gepetada from '@site/static/img/gepetada.jpg';
 
 # Implementando design patterns em Python
 
 :::note skill issue
 
 <img 
-  src="img/skill_issue.jpg"
+  src={SkillIssue}
   alt="Skill issue" 
   style={{ 
     display: 'block',
@@ -30,7 +32,7 @@ Nenhuma seção de exercícios é obrigatória, mas escolher não fazer nenhuma 
 :::warning gepetada
 
 <img 
-  src="img/gepetada.jpg"
+  src={Gepetada}
   alt="Gepetada" 
   style={{ 
     display: 'block',
@@ -44,6 +46,7 @@ Nenhuma seção de exercícios é obrigatória, mas escolher não fazer nenhuma 
 Esta seção contem GEPETADAS.
 
 :::
+
 
 ## 1. Exercícios de Strategy
 
