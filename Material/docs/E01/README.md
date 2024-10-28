@@ -22,18 +22,8 @@ slug: /e1
 
 ## 1. Objetivos de aprendizagem
 
-## 2. Slides
+Espera-se que, após essa aula, o aluno:
 
-<div style={{ textAlign: 'center' }}>
-    <iframe 
-        style={{
-            display: 'block',
-            margin: 'auto',
-            width: '100%',
-            height: '50vh',
-        }}
-        src="https://slides.com/rodrigomangoninicola/m8-ec-encontros/embed#/encontro1"
-        frameborder="0" 
-        allowFullScreen>
-    </iframe>
-</div>
+* Sabe por que existem e para que servem design patterns;
+* Entende o que são os patterns; Strategy, Observer e Factory; e
+* Consegue entender e implementar um Strategy pattern utilizando C++.

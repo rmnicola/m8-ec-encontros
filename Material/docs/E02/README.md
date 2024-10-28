@@ -1,10 +1,10 @@
 ---
-title: E2 - SLAM
+title: E2 - Revisão de ROS
 sidebar_position: 4
 slug: /e2
 ---
 
-# Entendendo e implementando SLAM
+# Revisão de ROS
 
 **Encontro em 29/10/2024**
 
@@ -22,4 +22,7 @@ slug: /e2
 
 ## 1. Objetivos de aprendizagem
 
-## 2. Slides
+Espera-se que, após essa aula, o aluno:
+
+* Tem domínio sobre os conceitos básicos envolvidos na utilização de ROS; e
+* Conhece e sabe implementar pacotes simples utilizando C++ e ROS.

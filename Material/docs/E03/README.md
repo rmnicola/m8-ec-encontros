@@ -1,5 +1,5 @@
 ---
-title: E3 - Revisando ROS
+title: E3 - Navegação reativa
 sidebar_position: 5
 slug: /e3
 ---
@@ -22,4 +22,9 @@ slug: /e3
 
 ## 1. Objetivos de aprendizagem
 
-## 2. Slides
+Espera-se que, após essa aula, o aluno:
+
+* Conhece os principais desafios e conceitos básicos envolvidos na navegação de
+  robôs;
+* Sabe quais são as principais formas de implementar navegação reativa; e
+* Entende o que são máquinas de estados e sabe implementá-las.

@@ -1,10 +1,10 @@
 ---
-title: E5 - Acompanhamento
+title: E5 - SLAM
 sidebar_position: 7
 slug: /e5
 ---
 
-# Acompanhamento de projeto
+# SLAM
 
 **Encontro em 07/11/2024**
 
@@ -21,6 +21,3 @@ slug: /e5
 <br/>
 
 ## 1. Objetivos de aprendizagem
-
-## 2. Slides
-
