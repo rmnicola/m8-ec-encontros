@@ -27,4 +27,5 @@ Espera-se que, após essa aula, o aluno:
 * Conhece os principais desafios e conceitos básicos envolvidos na navegação de
   robôs;
 * Sabe quais são as principais formas de implementar navegação reativa; e
-* Entende o que são máquinas de estados e sabe implementá-las.
+* Entende o que são máquinas de estados e a sua correlação com navegação de
+  robôs.
