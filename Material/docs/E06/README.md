@@ -1,5 +1,5 @@
 ---
-title: E6 - Chatbot I
+title: E6 - Chatbot
 sidebar_position: 8
 slug: /e6
 ---
