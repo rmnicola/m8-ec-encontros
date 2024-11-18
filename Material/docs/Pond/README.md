@@ -17,5 +17,3 @@ slug: /ponderadas
   }} 
 />
 <br/>
-
-Em breve detalhes sobre as ponderadas...
