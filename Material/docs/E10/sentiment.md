@@ -6,3 +6,21 @@ slug: /sentiment
 ---
 
 # Análise de sentimento
+
+:::info autoestudo obrigatório
+
+<div style={{ textAlign: 'center' }}>
+    <iframe 
+        style={{
+            display: 'block',
+            margin: 'auto',
+            width: '100%',
+            height: '50vh',
+        }}
+        src="https://www.youtube.com/embed/oWo9SNcyxlI" 
+        frameborder="0" 
+        allowFullScreen>
+    </iframe>
+</div>
+
+:::
